@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+<!-- HEAD SECTION -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TogetherV</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
+  <!-- Bootstarp CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Normalized CSS CDN-->
+  <link href="/css/normalize.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/fontawesome/css/all.css">
+  <source src="/fontawesome/js/all.js" type="">
+
+  <!-- Custom CSS-->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+
+  <!-- Owl-Carousel-JS-CDN-Links -->
+
+<link
+rel="stylesheet"
+href="/OwlCarousel-2/dist/assets/owl.carousel.min.css"
+/>
+<link
+rel="stylesheet"
+href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
+/>
+
+</head>
+
+<body>
+
+  <!-- Top Header Bar-->
+
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-2">
+          <a class="navbar-brand" href="#"><img src="/images/tgv_logo.jpg" class="logo-main" alt="TogetherV"></a>
+        </div>
+        <div class="col-md-6 col-search col-sm-6 search-bar">
+          <form action="#">
+            <input type="search" class="search-data" placeholder="Search">
+            <button type="submit" class="fas fa-search search-button"></button>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-2 gift-finder-area">
+          <button class="white-btn">Gift Finder</button>
+        </div>
+        <div class="col-md-2 col-sm-2 d-flex top-header-icons">
+          <a class="nav-link top-nav-icon" aria-current="page" href="#"><i class="fa-solid fa-heart"></i></a>
+          <a class="nav-link top-nav-icon" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a class="nav-link top-nav-icon" href="#" id="navbarDropdown"><i class="fa-solid fa-user"></i></a>
+          <a class="nav-link top-nav-icon" href="#"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar-->
+
+  <div class="menu-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Birthday</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Anniversary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cake</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Personalised</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">More Gifts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Surprise</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Occasion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">New Year</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Flowers</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav d-flex me-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Need Help?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Slider Banner (1080x480) & Side Banner (305x430) -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-9">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active " data-bs-interval="3000">
+              <img src="/images/banner-1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/images/banner-2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/images/slide (3).jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-3">
+        <img src="/images/top-side-banner.jpg" class="side-banner" alt="top-side-banner">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Category-Banner-Section  Image size (480x480) -->
+  <div class="container category-banner-section">
+    <h4 class="category-banner-section-title">Looking For Something</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="carousel-inner">
+          <div>
+            <img src="/images/category-img-1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4 class="category-banner-title">Cake</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="carousel-inner">
+          <div>
+            <img src="/images/category-img-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4 class="category-banner-title">Balloon Surprise</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="carousel-inner">
+              <div>
+                <img src="/images/category-img-3.jpg" class="d-block w-100 category-banner-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4 class="category-banner-title">Occasion</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="carousel-inner">
+              <div>
+                <img src="/images/category-img-4.jpg" class="d-block w-100 category-banner-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4 class="category-banner-title">Gifts</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 25px;">
+          <div class="col-md-6">
+            <div class="carousel-inner">
+              <div>
+                <img src="/images/category-img-5.jpg" class="d-block w-100 category-banner-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4 class="category-banner-title">Annivesary</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="carousel-inner">
+              <div>
+                <img src="/images/category-img-6.jpg" class="d-block w-100 category-banner-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4 class="category-banner-title">Party</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Offer Banner section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 d-flex">
+        <img src="/images/offer-banner.webp" class="offer-banner" alt="">
+      </div>
+    </div>
+  </div>
+
+        <!-- trending Experience Category -->
+
+        <div class="decor-ctgy-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm">
+                <h5 class="decor-title">Trending Experience</h5>
+                <p class="decor-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book.</p>
+                <a href="#">View More</a>
+              </div>
+    
+              <div class="col-md-9">
+                <div class="owl-carousel owl-theme">
+                  <div class="item">
+                    <div class="card" style="width: 18rem; border: 1px solid #eee">
+                      <div class="wish-rating">
+                        <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                        <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                      </div>
+                      <img src="/images/car-boot-1.webp" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card" style="width: 18rem;border: 1px solid #eee">
+                      <div class="wish-rating">
+                        <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                        <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                      </div>
+                      <img src="/images/Christmas 2.jpg" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card" style="width: 18rem;border: 1px solid #eee">
+                      <div class="wish-rating">
+                        <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                        <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                      </div>
+                      <img src="/images/Christmas 3.jpg" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card" style="width: 18rem; border: 1px solid #eee">
+                      <div class="wish-rating">
+                        <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                        <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                      </div>
+                      <img src="/images/car-boot-1.webp" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                        <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!-- Romantic/Personized-video/Balloon-surprise Experience Product Section  -->
+
+  <div class="container-fluid" style="background-image: url('/images/bg-component.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+      <div class="video-exp-section">
+        <h4>Romantic Experience</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <img class="exp-video" src="/images/romantic-exp-video-banner-1.png" alt="" srcset="" style="height: 290px; width: 505px; margin-top: 40px; border-radius: 10px;box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.13);">
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem; border: 1px solid #eee">
+              <div class="pdt-location"><i class="fa-solid fa-location-dot"></i> Janakpuri</div>
+              <img src="/images/romantic-exp.webp" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                <span>₹1799 <strike class="strick-rate">₹1799</strike>
+                  <span class="wish-rating-2">
+                    <span class="rating-icon-2">5 <i class="fa-solid fa-star"></i></span>
+                    <span class="wishlist-icon-2"><i class="fa-solid fa-heart"></i></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem; border: 1px solid #eee">
+              <div class="pdt-location"><i class="fa-solid fa-location-dot"></i> Janakpuri</div>
+              <img src="/images/car-boot-1.webp" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                <span>₹1799 <strike class="strick-rate">₹1799</strike>
+                  <span class="wish-rating-2">
+                    <span class="rating-icon-2">5 <i class="fa-solid fa-star"></i></span>
+                    <span class="wishlist-icon-2"><i class="fa-solid fa-heart"></i></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background-color: #FFF1F1;">
+    <div class="container">
+      <div class="video-exp-section">
+        <h4>Personalised Video</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <img class="exp-video" src="/images/personalized-video-banner-1.png" alt="" srcset="" style="height: 290px; width: 505px; margin-top: 40px; border-radius: 10px;box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.13);">
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem; border: 1px solid #eee">
+              <div class="pdt-location"><i class="fa-solid fa-location-dot"></i> Janakpuri</div>
+              <img src="/images/romantic-exp.webp" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                <span>₹1799 <strike class="strick-rate">₹1799</strike>
+                  <span class="wish-rating-2">
+                    <span class="rating-icon-2">5 <i class="fa-solid fa-star"></i></span>
+                    <span class="wishlist-icon-2"><i class="fa-solid fa-heart"></i></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem; border: 1px solid #eee">
+              <div class="pdt-location"><i class="fa-solid fa-location-dot"></i> Janakpuri</div>
+              <img src="/images/car-boot-1.webp" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                <span>₹1799 <strike class="strick-rate">₹1799</strike>
+                  <span class="wish-rating-2">
+                    <span class="rating-icon-2">5 <i class="fa-solid fa-star"></i></span>
+                    <span class="wishlist-icon-2"><i class="fa-solid fa-heart"></i></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background-color: #FFF1F1;">
+    <div class="container">
+      <div class="video-exp-section">
+        <h4>Balloon Surprise</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <img class="exp-video" src="/images/balloon-surprise-video-banner-1.png" alt="" srcset="" style="height: 290px; width: 505px; margin-top: 40px; border-radius: 10px;box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.13);">
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem; border: 1px solid #eee">
+              <div class="pdt-location"><i class="fa-solid fa-location-dot"></i> Janakpuri</div>
+              <img src="/images/romantic-exp.webp" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                <span>₹1799 <strike class="strick-rate">₹1799</strike>
+                  <span class="wish-rating-2">
+                    <span class="rating-icon-2">5 <i class="fa-solid fa-star"></i></span>
+                    <span class="wishlist-icon-2"><i class="fa-solid fa-heart"></i></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem; border: 1px solid #eee">
+              <div class="pdt-location"><i class="fa-solid fa-location-dot"></i> Janakpuri</div>
+              <img src="/images/car-boot-1.webp" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                <span>₹1799 <strike class="strick-rate">₹1799</strike>
+                  <span class="wish-rating-2">
+                    <span class="rating-icon-2">5 <i class="fa-solid fa-star"></i></span>
+                    <span class="wishlist-icon-2"><i class="fa-solid fa-heart"></i></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Get more from the store - section -->
+
+  <div class="container">
+    <div class="store">
+      <h4>Get More From The Store</h4>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-2">
+          <div class="top-category-card">
+            <img class="top-category-icon" src="/images/top-category-icon-1.png" alt="">
+            <p class="top-category-title">Balloon Surprise</p>
+          </div>
+         
+        </div>
+        <div class="col-md-2">
+          <div class="top-category-card">
+            <img class="top-category-icon" src="/images/top-category-icon-2.png" alt="">
+            <p class="top-category-title">Balloon Bouquet</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="top-category-card">
+            <img class="top-category-icon" src="/images/top-category-icon-3.png" alt="">
+            <p class="top-category-title">Personalised Video</p>
+          </div>
+          
+        </div>
+        <div class="col-md-2">
+          <div class="top-category-card">
+            <img class="top-category-icon" src="/images/top-category-icon-4.png" alt="">
+            <p class="top-category-title">Melody</p>
+          </div>
+          
+        </div>
+        <div class="col-md-2">
+          <div class="top-category-card">
+            <img class="top-category-icon" src="/images/top-category-icon-5.png" alt="">
+            <p class="top-category-title">Personalised App</p>
+          </div>
+          
+        </div>
+        <div class="col-md-2">
+          <div class="top-category-card">
+            <img class="top-category-icon" src="/images/top-category-icon-6.png" alt="">
+            <p class="top-category-title">Balloon Surprise</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Find-More-Section -->
+
+  <div class="container">
+    <div class="find-more-section">
+      <h4>Find More</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="category-card">
+            <img src="/images/find-more-category-1.jpg" alt="">
+            <div class="category-title">
+              <p>Balloon Surprise</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="category-card">
+            <img src="/images/find-more-category-2.jpg" alt="">
+            <div class="category-title">
+              <p>Kids Balloon Decoration</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="category-card">
+            <img src="/images/find-more-category-3.jpg" alt="">
+            <div class="category-title">
+              <p>Wall Balloon Decoration</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="category-card">
+            <img src="/images/find-more-category-4.jpg" alt="">
+            <div class="category-title">
+              <p>Balloon Decoration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Car-Boot Decoration Category -->
+
+  <div class="decor-ctgy-1" style="background-color: #fff;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5 class="decor-title">Car Boot Bouquet</h5>
+          <p class="decor-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+          <a href="#">View More</a>
+        </div>
+        <div class="col-md-9">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="card" style="width: 18rem; border: 1px solid #eee">
+                <div class="wish-rating">
+                  <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                  <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <img src="/images/car-boot-1.webp" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                  <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card" style="width: 18rem;border: 1px solid #eee">
+                <div class="wish-rating">
+                  <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                  <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <img src="/images/Christmas 2.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                  <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card" style="width: 18rem;border: 1px solid #eee">
+                <div class="wish-rating">
+                  <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                  <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <img src="/images/Christmas 3.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                  <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card" style="width: 18rem; border: 1px solid #eee">
+                <div class="wish-rating">
+                  <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                  <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <img src="/images/car-boot-1.webp" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                  <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Christmas Decoration Category -->
+
+  <div class="decor-ctgy-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5 class="decor-title">Christmas Decoration</h5>
+          <p class="decor-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+          <a href="#">View More</a>
+        </div>
+
+        <div class="col-md-9">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="card" style="width: 18rem;">
+                <div class="wish-rating">
+                  <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                  <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <img src="/images/Christmas-1.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                  <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card" style="width: 18rem;">
+                <div class="wish-rating">
+                  <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                  <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <img src="/images/Christmas 2.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                  <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card" style="width: 18rem;">
+                <div class="wish-rating">
+                  <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                  <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <img src="/images/Christmas 3.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                  <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card" style="width: 18rem;">
+                <div class="wish-rating">
+                  <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                  <span class="rating-icon">5 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <img src="/images/Christmas-1.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text product-name">Golden Themed New Year's Decoration</p>
+                  <p class="card-text"><i class="fa-solid fa-location-dot"></i> Janakpuri <span>₹1799 <strike class="strick-rate">₹1799</strike></span></p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      </div>
+    </div>
+  </div>
+
+  <!-- Why - TogetherV - Section -->
+
+  <div class="container">
+    <div class="why-section">
+      <h4>Why TogetherV</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="icon-card">
+            <img class="why-icon" src="/images/delivery-1.png" alt="">
+            <p>Delivery Across India<span>We deliver gifts to over 70 countries</span></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="icon-card">
+            <img class="why-icon" src="/images/payment-1.png" alt="">
+            <p>100% Safe & Secure Payments<span>Pay using secure payment methods</span></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="icon-card">
+            <img class="why-icon" src="/images/product-range-1.png" alt="">
+            <p>Wide Range of Products<span>We Offering vast variety of products</span></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="icon-card">
+            <img class="why-icon" src="/images/customer-1.png" alt="">
+            <p>1 Million+<span>Happy Customer</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEW SECTION -->
+
+  <div class="review-section">
+    <div class="container">
+      <h4>What Customers Are Saying</h4>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col">
+                <div class="owl-carousel owl-theme">
+                  <div class="item">
+                    <div class="card" style="width: 14rem;">
+                      <img src="/images/review-img-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Person Name</h5>
+                        <span class="rating">5
+                          <span class=" star-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                        </span>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card" style="width: 14rem;">
+                      <img src="/images/review-img-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Person Name</h5>
+                        <span class="rating">5
+                          <span class=" star-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                        </span>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card" style="width: 14rem;">
+                      <img src="/images/review-img-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Person Name</h5>
+                        <span class="rating">5
+                          <span class=" star-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                        </span>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card" style="width: 14rem;">
+                      <img src="/images/review-img-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Person Name</h5>
+                        <span class="rating">5
+                          <span class=" star-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                        </span>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG-SECTION -->
+
+  <div class="container">
+    <div class="blog-section">
+      <h4>Recent Blog</h4>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="blog-post-1">
+            <img src="/images/blog-img-5.jpeg" alt="" srcset="">
+            <div class="blog-title-1">
+              <h4>Funny Things Married Couples Fight Over<span class="author-name-time">Ishita Bansal |
+                  10-03-2022</span></h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="blog-post-2">
+            <img src="/images/blog-img-6.png" alt="">
+            <div class="blog-title-2">
+              <h4>Know Why We Celebrate Holi<span class="author-name-time">Ishita Bansal | 10-03-2022</span></h4>
+            </div>
+          </div>
+
+          <div class="blog-post-2">
+            <img src="/images/blog-img-1.jpeg" alt="">
+            <div class="blog-title-2 blog-title-3">
+              <h4>Tips to Stay Happy<span class="author-name-time">Ishita Bansal | 10-03-2022</span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MOBILE-APP-DOWNLOAD-SECTION -->
+
+  <div class="container-fluid mobile-app-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5 mobile-download-info">
+          <h3>Design Your Perfect Day</h3>
+          <p>Get the best of gifts & decoration, all in one <br> place. Download the app today!</p>
+          <a href="" class="download-btn"><img class="btn-img" src="/images/app-store.png" alt=""></a>
+          <a href="" class="download-btn"><img class="btn-img" src="/images/play-store.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer - Section -->
+  <div class="footer-section">
+    <div class="container">
+      <div class="row footer-row-1">
+
+        <div class="col-md-3">
+          <h4>Connect With Us</h4>
+          <img class="footer-logo" src="/images/tgv-white-logo.png" alt="">
+          <div class="call-info">
+            <i class="fa-solid fa-phone"></i>
+            <span> +91-9711529001</span>
+          </div>
+          <div class="mail-info">
+            <i class="fa-solid fa-envelope"></i>
+            <span> info@togetherv.com</span>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <h4>Cities</h4>
+          <ul class="footer-tab">
+            <li class="footer-link"><a href="#">Delhi NCR</a></li>
+            <li class="footer-link"><a href="#">Bangalore</a></li>
+            <li class="footer-link"><a href="#">Mumbai</a></li>
+            <li class="footer-link"><a href="#">Kolkata</a></li>
+            <li class="footer-link"><a href="#">Pune</a></li>
+            <li class="footer-link"><a href="#">Jaipur</a></li>
+            <li class="footer-link"><a href="#">Ahmedabad</a></li>
+            <li class="footer-link"><a href="">Hyderabad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h4>Quick Links</h4>
+          <ul class="footer-tab">
+            <li class="footer-link"><a href="#">About</a></li>
+            <li class="footer-link"><a href="#">Careers</a></li>
+            <li class="footer-link"><a href="#">Partner</a></li>
+            <li class="footer-link"><a href="#">Contact</a></li>
+            <li class="footer-link"><a href="#">Our Policies</a></li>
+            <li class="footer-link"><a href="#">FAQ</a></li>
+            <li class="footer-link"><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h4>Secured With</h4>
+          <img class="footer-logo" src="/images/razorpay logo.png" alt="">
+          <img class="footer-logo" src="/images/SSLcertificate.png" alt="">
+        </div>
+
+        <div class="col-md-3">
+          <h4>Stay Tuned With Us</h4>
+          <p>For latest updates, deals & offers
+            direct in your inbox</p>
+
+          <div class="input-group mb-3 newsletter">
+            <span class="input-group-text newsletter-mail-icon"><i class="fa-solid fa-envelope"></i></span>
+            <input type="text" class="form-control newsletter-input" aria-label="Amount (to the nearest dollar)"
+              placeholder="Enter your email id">
+            <span class="input-group-text newsletter-submit-icon"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+          <div class="social-icons">
+            <span><a class="social-link" href="#"><i class="fa-brands fa-facebook"></i></a></span>
+            <span><a class="social-link" href="#"><i class="fa-brands fa-instagram"></i></a></span>
+            <span><a class="social-link" href="#"><i class="fa-brands fa-linkedin"></i></a></span>
+          </div>
+        </div>
+      </div>
+      <div class="row footer-row-2">
+        <div class="copyright-section">
+          <p>© Copyright 2016-21, NIKUNJ SOFTWARE TECHNOLOGIES PRIVATE LIMITED</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+     <!-- Owl-Carousel-JS-CDN-Links -->
+     <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   ></script>
+   <script src="/OwlCarousel-2/dist/owl.carousel.min.js"></script>
+  
+   <script>
+     $(".owl-carousel").owlCarousel({
+       loop: true,
+       margin: 10,
+       nav: false,
+       dots: false,
+       autoplayTimeout:2000,
+       autoplay:true,
+       responsive: {
+         0: {
+           items: 1,
+         },
+         600: {
+           items: 3,
+         },
+         1000: {
+           items: 3,
+         },
+       },
+     });
+   </script>
+  
+  
+
+  <!--Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+  </script>
+  <!-- Custom JavaScript-->
+  <script src="script.js"></script>
+</body>
+
+</html>

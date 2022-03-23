@@ -350,4 +350,14 @@
     margin-top: -2px;
     border: 0;
   }
+
+
+}
+
+/* Responsive Design for Category Page */
+
+@media (max-width:428px){
+  .main-category-section{
+      height: 100px;
+  }
 }

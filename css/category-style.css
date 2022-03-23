@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* --- Defining Varibales --- */
+
+:root {
+  --primary-color: #cc0000;
+  --secondary-color: #300606;
+  --third-color: #ffe2e2;
+  --white-color: #fff;
+  --text-color: #3d3d3d;
+  --black-color: #000;
+  --secondary-bg-color:#eaeaea77;
+  --primary-font: "poppins", sans-serif;
+  /* --secondary-font : 'Quicksand', sans-serif; */
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color) !important ;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/* --- Custom Scrollbar ---*/
+
+::-webkit-scrollbar {
+  width: 0.325rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #1f0000, #770303);
+}
+
+/* ---- Custome CSS Design ---- */
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--secondary-color);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+}
+
+h4 {
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  color: var(--black-color);
+  font-family: var(--secondary-font);
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.logo-main {
+  margin-top: 12px;
+  max-width: 120px;
+}
+/* CSS for button */
+.main-btn {
+  display: inline-block;
+  padding: 0.4rem 1.575rem;
+  line-height: 1.5625rem;
+  background: linear-gradient(0deg, #1f0000, #770303);
+  color: var(--white-color);
+  font-size: 0.9375rem;
+  border-radius: 0.2rem;
+  outline-offset: 0px;
+  outline: none;
+  font-weight: 600;
+  text-transform: capitalize;
+  -webkit-transition: all.4s ease-out 0s;
+  -o-transition: all.4s ease-out 0s;
+  -moz-transition: all.4s ease-out 0s;
+  transition: all.4s ease-out 0s;
+}
+
+.white-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 0.4rem 1.575rem;
+  line-height: 1.5625rem;
+  background-color: var(--white-color);
+  border: 0.1875rem solid var(--white-color);
+  color: var(--primary-color);
+  font-size: 0.9375rem;
+  border-radius: 0.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 2px solid #ebebeb;
+  -webkit-transition: all.4s ease-out 0s;
+  -o-transition: all.4s ease-out 0s;
+  -moz-transition: all.4s ease-out 0s;
+  transition: all.4s ease-out 0s;
+}
+
+.main-btn:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.white-btn:hover {
+  background-color: transparent;
+  color: var(--white-color);
+  background: linear-gradient(0deg, #1f0000, #770303);
+}
+
+/* CSS FOR TOP HEADER */
+.top-header {
+    height: 65px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.13);
+}
+
+.col-search {
+  margin-top: 12px;
+}
+.search-input {
+  border-right: 0px;
+  background-color: #f4f4f4;
+}
+.top-header-icons {
+  margin-top: 10px;
+}
+.top-nav-icon {
+  color: #7b7b7b;
+}
+
+.col-search form {
+  display: flex;
+  height: 40px;
+  min-width: 18% !important;
+}
+.col-search form .search-data {
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 2px;
+  background-color: #f4f4f4;
+  color: #000;
+  border: none;
+}
+
+.col-search form .search-button {
+  padding: 0 15px;
+  background-color: #f4f4f4;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #7b7b7b;
+  border-radius: 2px;
+}
+
+.gift-finder-area {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* CSS FOR MENU BAR */
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: var(--black-color);
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+
+.side-banner {
+  max-width: 305px;
+}
+
+/*  Breadcrumb-section  */
+.breadcrumb{
+    height: 40px;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+.breadcrumb p{
+    font-size: 10px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+/* category-banner-image-section */
+.main-category-section{
+    max-width: 100%;
+    height: 360px;
+    padding: 0;
+    background-image: url('/images/main-category-banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* sub-category-carusel-section */
+.sub-ctg-section{
+    text-align: center;
+    margin: auto;
+  }
+.sub-ctg-section .icon-img{
+    height:auto;
+    max-width: 65px;
+    padding: 5px;
+    background-color:var(--white-color);
+    border-radius: 50%;
+}
+.sub-ctg-section .icon-img img{
+    max-width: 60px;
+    object-fit: cover;
+}
+.sub-ctg-section .icon-img p{
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.owl-nav .owl-prev{
+    position: absolute;
+    top: 25px;
+    left: 0px;
+}
+
+.owl-nav .owl-next{
+    position: absolute;
+    top: 25px;
+    right: 0px;
+}

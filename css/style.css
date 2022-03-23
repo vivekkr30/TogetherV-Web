@@ -233,7 +233,7 @@ p {
 
 /* CSS for category-banner-section */
 
-.category-banner-section {
+.wrapper {
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -256,8 +256,6 @@ p {
 /* REVIEW SECTION */
 .review-section {
   background-color: #eaeaea77;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 .review-section .card {
   border-radius: 10px;
@@ -291,11 +289,6 @@ p {
   line-height: normal;
 }
 
-
-
-.video-exp-section {
-  padding: 50px 0 50px 0px;
-}
 
 .video-exp-section .card{
   border: none;
@@ -375,9 +368,6 @@ p {
 
 /* Get more from the store - section */
 
-.store {
-  padding: 50px 0 50px 0px;
-}
 .store .col-md-4 {
   display: grid !important;
   align-content: center !important;
@@ -405,9 +395,6 @@ p {
 
 /* find-more-section */
 
-.find-more-section {
-  padding: 50px 0 50px 0px;
-}
 .find-more-section h4 {
   padding-bottom: 25px;
 }
@@ -444,7 +431,6 @@ p {
 /* Decoration Category-card-Section */
 
 .decor-ctgy-1 {
-  padding: 50px 0 50px 0px;
   background-color: var(--secondary-bg-color);
 }
 
@@ -531,7 +517,6 @@ p {
 /* Why TogetherV section */
 
 .why-section {
-  padding: 50px 0 50px 0px;
   text-align: center;
 }
 .why-section h4 {
@@ -560,7 +545,6 @@ p {
 /* BLOG-SECTION */
 
 .blog-section {
-  padding: 50px 0 50px 0px;
   max-width: 100%;
 }
 .blog-section .col-md-7 {

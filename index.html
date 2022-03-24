@@ -69,6 +69,7 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
     </div>
   </div>
 
+  
   <!-- Navigation Bar-->
 
   <div class="menu-bar">
@@ -365,7 +366,7 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
 
   <div class="container-fluid" style="background-color: #FFF1F1;">
     <div class="container">
-      <div class="video-exp-section">
+      <div class="video-exp-section wrapper">
         <h4>Personalised Video</h4>
         <div class="row">
           <div class="col-md-6">
@@ -408,7 +409,7 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
 
   <div class="container-fluid" style="background-color: #FFF1F1;">
     <div class="container">
-      <div class="video-exp-section">
+      <div class="video-exp-section wrapper">
         <h4>Balloon Surprise</h4>
         <div class="row">
           <div class="col-md-6">
@@ -455,7 +456,7 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
   <div class="container">
     <div class="store wrapper">
       <h4>Get More From The Store</h4>
-      <div class="row d-flex justify-content-center">
+      <div class="row">
         <div class="col-md-2">
           <div class="top-category-card">
             <img class="top-category-icon" src="/images/top-category-icon-1.png" alt="">
@@ -731,9 +732,9 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
           <div class="carousel-item active">
             <div class="row">
               <div class="col">
-                <div class="owl-carousel owl-theme">
+                <div class="owl-carousel owl-theme" style="margin-left: 50px;">
                   <div class="item">
-                    <div class="card" style="width: 14rem;">
+                    <div class="card" style="width: 20rem;">
                       <img src="/images/review-img-1.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">Person Name</h5>
@@ -752,7 +753,7 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
                     </div>
                   </div>
                   <div class="item">
-                    <div class="card" style="width: 14rem;">
+                    <div class="card" style="width: 20rem;">
                       <img src="/images/review-img-1.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">Person Name</h5>
@@ -771,7 +772,7 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
                     </div>
                   </div>
                   <div class="item">
-                    <div class="card" style="width: 14rem;">
+                    <div class="card" style="width: 20rem;">
                       <img src="/images/review-img-1.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">Person Name</h5>
@@ -789,8 +790,9 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
                       </div>
                     </div>
                   </div>
+
                   <div class="item">
-                    <div class="card" style="width: 14rem;">
+                    <div class="card" style="width: 20rem;">
                       <img src="/images/review-img-1.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">Person Name</h5>
@@ -808,6 +810,28 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
                       </div>
                     </div>
                   </div>
+
+                  <div class="item">
+                    <div class="card" style="width: 20rem;">
+                      <img src="/images/review-img-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Person Name</h5>
+                        <span class="rating">5
+                          <span class=" star-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                        </span>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  
                 </div>
               </div>
             </div>
@@ -824,8 +848,8 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
       <h4>Recent Blog</h4>
       <div class="row">
         <div class="col-md-7">
-          <div class="blog-post-1">
-            <img src="/images/blog-img-5.jpeg" alt="" srcset="">
+          <div class="blog-post-1" id="blog-past">
+            <img id="blog-image" src="/images/blog-img-5.jpeg" alt="" srcset="">
             <div class="blog-title-1">
               <h4>Funny Things Married Couples Fight Over<span class="author-name-time">Ishita Bansal |
                   10-03-2022</span></h4>
@@ -963,6 +987,7 @@ href="/OwlCarousel-2/dist/assets/owl.theme.default.min.css"
        loop: true,
        margin: 10,
        nav: false,
+       center:true,
        dots: false,
        autoplayTimeout:2000,
        autoplay:true,

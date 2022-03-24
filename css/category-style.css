@@ -256,8 +256,8 @@ p {
 }
 
 .wrapper{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 
@@ -292,6 +292,277 @@ p {
     position: absolute;
     top: 25px;
     right: 0px;
+}
+
+/* Top-Picks-Section */
+
+.top-picks .card{
+  border: none;
+  border-radius: 10px;
+  transition: ease-in-out 0.25s;
+}
+
+.top-picks .card:hover{
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.13);
+}
+
+.top-picks .card .card-img-top{
+  height: 280px;
+  max-width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.top-picks .card .product-name{
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.top-picks .card .card-body span{
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+.top-picks .card .card-body .strick-rate{
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--text-color); 
+}
+.top-picks .card .card-body .wish-rating-2{
+  float: right;
+}
+.top-picks .card .wish-rating-2 .wishlist-icon-2{
+  background-color: var(--white-color);
+  padding: 3px;
+  font-size: 12px;
+  color: var(--text-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.103);
+  border-radius: 30px;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+}
+
+.top-picks .card .wish-rating-2 .rating-icon-2{
+  background-color: var(--white-color);
+  padding: 3px;
+  font-size: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.103);
+  border-radius: 30px;
+  color: var(--text-color);
+  display: inline-block;
+  height: 25px;
+  width: 45px;
+  text-align: center;
+}
+
+.top-picks .card .pdt-location{
+  position: absolute;
+  left: 180px;
+  top: 10px;
+  font-size: 12px;
+  background-color: var(--white-color);
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+
+/* Offer For YOu */
+
+.top-picks .card{
+  border: none;
+  border-radius: 10px;
+  transition: ease-in-out 0.25s;
+}
+
+.top-picks .card:hover{
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.13);
+}
+
+.top-picks .card .card-img-top{
+  height: 280px;
+  max-width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+.top-picks .card .wish-rating{
+  position: absolute;
+  left: 180px;
+  top: 15px;
+  
+}
+.top-picks .card .wish-rating .wishlist-icon{
+  background-color: var(--white-color);
+  padding: 3px;
+  font-size: 12px;
+  color: var(--primary-color);
+  border-radius: 30px;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+}
+.top-picks .card .wish-rating .rating-icon{
+  background-color: var(--white-color);
+  padding: 3px;
+  font-size: 12px;
+  color: #ffd000;
+  border-radius: 30px;
+  display: inline-block;
+  height: 25px;
+  width: 45px;
+  text-align: center;
+}
+
+.top-picks .card .card-body .product-name{
+  font-weight: 500;
+  line-height: 1.5;
+}
+.top-picks .card .card-body .card-text span{
+  font-weight: 600;
+  float: right;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+.top-picks .card .card-body .card-text span .strick-rate{
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+/* Bank & Wallet Offer Small Banner */
+
+.bank-offer .card{
+  background-color: #4A3083;
+}
+
+.bank-offer .card img{
+  background-color: var(--white-color);
+  height: 92px;
+}
+.bank-offer .card .card-title{
+  color: var(--white-color);
+  margin-bottom: 4px;
+}
+.bank-offer .card, .card-text,.card-title{
+  line-height: 1;
+  margin-bottom: 0px;
+}
+
+/* popular-decor-theme */
+
+.popular-decor-theme .card{
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
+   border:none;
+   background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.541) 100%
+  ) !important;
+}
+
+.popular-decor-theme .card img{
+  position: relative;
+  z-index: -1;
+}
+
+.popular-decor-theme .card .card-title{
+  position: relative;
+  top: 200px;
+  left: 30px;
+}
+
+.popular-decor-theme .card .card-title{
+  vertical-align: bottom;
+  color: var(--white-color);
+}
+
+
+/* product-scroll-nav */
+
+
+.product-scroll .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  border-color:#fff;
+  color: var(--black-color);
+  border-bottom: 2px solid var(--black-color);
+}
+.product-scroll .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+  border-color:#fff;
+}
+
+.product-scroll .card{
+  border: none;
+  border-radius: 10px;
+  transition: ease-in-out 0.25s;
+}
+
+.product-scroll .card:hover{
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.13);
+}
+
+.product-scroll .card .card-img-top{
+  height: 280px;
+  max-width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+.product-scroll .card .wish-rating{
+  position: absolute;
+  left: 180px;
+  top: 15px;
+  
+}
+.product-scroll .card .wish-rating .wishlist-icon{
+  background-color: var(--white-color);
+  padding: 3px;
+  font-size: 12px;
+  color: var(--primary-color);
+  border-radius: 30px;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+}
+.product-scroll .card .wish-rating .rating-icon{
+  background-color: var(--white-color);
+  padding: 3px;
+  font-size: 12px;
+  color: #ffd000;
+  border-radius: 30px;
+  display: inline-block;
+  height: 25px;
+  width: 45px;
+  text-align: center;
+}
+
+.product-scroll .card .card-body .product-name{
+  font-weight: 500;
+  line-height: 1.5;
+}
+.product-scroll .card .card-body .card-text span{
+  font-weight: 600;
+  float: right;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+.product-scroll .card .card-body .card-text span .strick-rate{
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--text-color);
 }
 
 

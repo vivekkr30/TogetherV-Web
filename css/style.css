@@ -289,6 +289,7 @@ p {
   line-height: normal;
 }
 
+/* Romantic/Personized-video/Balloon-surprise Experience Product Section  */
 
 .video-exp-section .card{
   border: none;
@@ -372,6 +373,9 @@ p {
   display: grid !important;
   align-content: center !important;
   justify-content: center !important;
+}
+.store .row{
+  margin-left: 25px;
 }
 .store h4 {
   padding-bottom: 25px;
@@ -567,13 +571,11 @@ p {
     rgba(0, 0, 0, 0.65) 100%
   ); /* W3C */
 }
-.blog-section .blog-post-1 img:hover {
-  transform: scale(1.2);
-}
 .blog-section .blog-post-1 img {
   max-width: 100%;
   position: relative;
   height: auto;
+  z-index: -1;
   object-fit: cover;
   transition: ease-in-out 0.5s;
 }

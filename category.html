@@ -14,9 +14,6 @@
   <!-- Bootstarp CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Normalized CSS CDN-->
-  <link href="/css/normalize.min.css" rel="stylesheet">
-
   <!-- Font Awesome -->
   <link rel="stylesheet" href="/fontawesome/css/all.css">
   <source src="/fontawesome/js/all.js" type="">
@@ -485,7 +482,7 @@
 
     <!-- product-scroll -->
 
-    <div class="product-scroll">
+    <div class="product-scroll wrapper">
       <div class="row">
         <div class="col-md-6">
           <h4 class="mb-4">Find More Products</h4>
@@ -504,13 +501,184 @@
             <li class="nav-item">
               <a class="nav-link text-muted" href="#">Cost: Low to High</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: #000;">Filter <i class="fa-solid fa-filter"></i></a>
+            <li class="nav-item" id="filter-btn" onclick="myFunction()">
+              <a class="nav-link" style="color: #000; cursor: pointer;">Filter <i class="fa-solid fa-filter"></i></a>
             </li>
           </ul>
         </div>
       </div>
 
+      <!-- filter-sidebar -->
+
+      <div id="filter_sidebar" class="filter-option">
+        <h4><i class="fa-solid fa-arrow-left" id="filter-back-btn" onclick="backFunction()" style="cursor: pointer;"></i> Filter</h4>
+        <div class="filter-option-list">
+          <h5>Explore More</h5>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Balloons
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Balloons Surprise
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Balloons Bouquet
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Kids Balloon
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Balloon Decoration
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              More In Balloons
+            </label>
+          </div>
+          
+        </div>
+
+        <div class="filter-option-list">
+          <h5>Other Category</h5>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Anniversary
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Cake
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Personalised
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              More Gifts
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Surprise
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Occasion
+            </label>
+          </div>
+          
+        </div>
+
+        <div class="filter-option-list">
+          <h5>Occasion</h5>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Anniversary
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Birthday
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Mother’s day
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Valentine's day
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Republic day
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              New Year Eve
+            </label>
+          </div>
+          
+        </div>
+
+        <div class="filter-option-list">
+          <h5>Theme Based</h5>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Golden Theme
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Kids Theme
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Men’s Theme
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Women’s Theme
+            </label>
+          </div>
+          
+          
+        </div>
+        
+        <div class="filter-bottom-btn">
+          <button class="btn-reset">Reset</button>
+          <button class="btn-apply">Apply</button>
+        </div>
+      </div>
+
+
+
+
+      <!-- all product row -->
       <div class="row mb-3 mt-4">
         <div class="col-md-3">
           <div class="card" style="width: 18rem; border: 1px solid #eee">
@@ -571,7 +739,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
 
       <div class="row mb-3 mt-4">
@@ -634,7 +802,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
 
       <div class="row mb-3 mt-4">
@@ -697,7 +865,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
 
       <div class="row mb-3 mt-4">
@@ -760,7 +928,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
 
@@ -968,72 +1136,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="/OwlCarousel-2/dist/owl.carousel.min.js"></script>
 
-  <script>
-
-    $(".owl-two").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: false,
-      dots: false,
-      autoplayTimeout: 4000,
-      autoplay: true,
-      responsive: {
-        0: {
-          items: 3,
-        },
-        600: {
-          items: 2,
-        },
-        1000: {
-          items: 4,
-        },
-      },
-    });
-
-    $(".owl-one").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: false,
-      dots: false,
-      autoplayTimeout: 3000,
-      autoplay: true,
-      responsive: {
-        0: {
-          items: 3,
-        },
-        600: {
-          items: 2,
-        },
-        1000: {
-          items: 4,
-        },
-      },
-    });
-
-
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 10,
-      center: true,
-      nav: true,
-      dots: false,
-      autoplayTimeout: 6000,
-      autoplay: true,
-      responsive: {
-        0: {
-          items: 3,
-        },
-        600: {
-          items: 4,
-        },
-        1000: {
-          items: 6,
-        },
-      },
-    });
-
-
-  </script>
+  
 
 
 

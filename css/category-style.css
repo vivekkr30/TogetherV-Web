@@ -129,10 +129,10 @@ p {
   outline: none;
   font-weight: 600;
   text-transform: capitalize;
-  -webkit-transition: all.4s ease-out 0s;
-  -o-transition: all.4s ease-out 0s;
-  -moz-transition: all.4s ease-out 0s;
-  transition: all.4s ease-out 0s;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
 }
 
 .white-btn {
@@ -148,10 +148,10 @@ p {
   font-weight: 600;
   text-transform: capitalize;
   border: 2px solid #ebebeb;
-  -webkit-transition: all.4s ease-out 0s;
-  -o-transition: all.4s ease-out 0s;
-  -moz-transition: all.4s ease-out 0s;
-  transition: all.4s ease-out 0s;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
 }
 
 .main-btn:hover {
@@ -210,7 +210,7 @@ p {
   border-radius: 2px;
 }
 
-.gift-finder-area {
+.gift-finder-area { 
   padding-left: 40px;
   padding-right: 40px;
 }

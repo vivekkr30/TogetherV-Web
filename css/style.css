@@ -68,7 +68,7 @@ body {
   background: var(--white-color);
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(0deg, #1f0000, #770303);
+  background: linear-gradient(90deg, #1f0000, #770303);
 }
 
 /* ---- Custome CSS Design ---- */
@@ -100,7 +100,7 @@ h4 {
 h5 {
   color: var(--black-color);
   font-family: var(--secondary-font);
-  text-transform: capitalize;
+  
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
@@ -129,10 +129,10 @@ p {
   outline: none;
   font-weight: 600;
   text-transform: capitalize;
-  -webkit-transition: all.4s ease-out 0s;
-  -o-transition: all.4s ease-out 0s;
-  -moz-transition: all.4s ease-out 0s;
-  transition: all.4s ease-out 0s;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
 }
 
 .white-btn {
@@ -148,14 +148,15 @@ p {
   font-weight: 600;
   text-transform: capitalize;
   border: 2px solid #ebebeb;
-  -webkit-transition: all.4s ease-out 0s;
-  -o-transition: all.4s ease-out 0s;
-  -moz-transition: all.4s ease-out 0s;
-  transition: all.4s ease-out 0s;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
 }
 
 .main-btn:hover {
-  background: transparent;
+  border: 1px solid var(--primary-color) !important;
+  background: var(--white-color);
   color: var(--primary-color);
 }
 
@@ -213,23 +214,279 @@ p {
   padding-left: 40px;
   padding-right: 40px;
 }
+#closeGiftFinder{
+  position: absolute;
+  z-index: 12;
+  right: 250px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.11);
+}
+
+
+/* Login Popup */
+.login-popup .model .model-dialog{
+    max-width: 800px !important;
+}
+.login-field-section{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.popup-close-btn{
+  position: relative !important;
+  top: 15px;
+  left: 350px !important;
+}
+
+.login-email-input,
+.login-mail-icon,
+.login-input {
+  max-width: 440px !important;
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 0px;
+  color: rgb(138, 138, 138);
+  cursor: pointer;
+}
+.login-mail-icon{
+  padding: 0px;
+}
+.login-input {
+  color: var(--text-color);
+  padding-left: 20px;
+}
+.login-input::placeholder {
+  color: rgb(138, 138, 138);
+}
+.email-btm-txt{
+  color: var(--primary-color);
+  font-size: 10px;
+  position: relative;
+  right:0px;
+  bottom: 10px;
+  float: right;
+}
+
+.signup-btm-txt{
+  color: #c00;
+  float: right;
+  position: relative;
+  top: 5px;
+  font-size: 10px;
+}
+
+.login-btn{
+  width: 100%;
+  border: none;
+}
+.login-btn:hover{
+  border: 1px solid var(--primary-color);
+}
+
+.or-seprate{
+  margin-top: 50px;
+  display: block;
+  color: #ccc;
+  text-align: center;
+}
+.or-seprate .line{
+  height: 1px;
+  margin-top: 12px;
+  width: 100%;
+  line-height: 2px;
+  background-color: #ccc;
+}
+
+.social-login{
+  display: inline-block;
+  padding-top: 25px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+.social-login button{
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 2.5px;
+  width: 170px;
+  color: var(--white-color);
+  border: none;
+}
+.fb-btn {
+  background-color: #3B5998 !important;
+}
+.fb-btn:hover {
+  background-color: #17387e !important;
+}
+.google-btn{
+  background-color: #DB4437 !important;
+}
+.google-btn:hover{
+  background-color: #be2416 !important;
+}
+
+
+/* City Name popup */
+
+.city-name-header{
+  background-color: var(--primary-color);
+}
+.cityname{
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+.cityname h5{
+  font-size: 12px;
+}
+.city-name-title{
+  color: var(--white-color);
+}
+.city-icon{
+  padding: 10px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 5px;
+  max-width: 80px;
+  object-fit: cover;
+}
 
 /* CSS FOR MENU BAR */
 
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .show > .nav-link {
-  color: var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
+.main-wrapper{
+  position: relative;
 }
-.navbar-light .navbar-nav .nav-link {
-  color: var(--black-color);
-  margin-left: 1rem !important;
-  margin-right: 1rem !important;
+.main-wrapper img{
+  width: 100%;
+  display: block;
+}
+.main-wrapper a{
+  color: #000;
+  text-decoration: none;
+}
+.main-wrapper ul li{
+  list-style-type: none;
+}
+.navigation{
+  background:var(--white-color);
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.brand-and-icon{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 
-.side-banner {
-  max-width: 305px;
+.navigation-toggler{
+  display: block;
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.4s ease;
+  border: 2px solid #000;
+  border-radius: 2.5px;
 }
+.navigation-toggler:hover{
+  opacity: 0.7;
+}
+.navigation-collapse{
+  overflow-y: scroll;
+  display: none;
+}
+.navigation-nav > li > a{
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+  padding: 0.6rem 0;
+  margin: 0.2rem 0;
+  border-bottom: 1px solid #ddd;
+  border-radius: 1px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.drop-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navigation-nav > li > a:hover{
+  opacity: 0.7;
+}
+.sub-menu h4{
+  text-transform: capitalize;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+.sub-menu ul li{
+  text-transform: capitalize;
+  padding: 0.2rem 0;
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+.sub-menu ul li a{
+  opacity: 0.8;
+  transition: all 0.5s ease;
+}
+.sub-menu ul li a:hover{
+  padding-left: 14px;
+  opacity: 0.9;
+}
+.sub-menu{
+  display: none;
+}
+
+.sub-menu-item{
+  padding-left: 1.2rem;
+}
+.sub-menu-item:nth-child(3){
+  background: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.sub-menu-item:nth-child(3) h2{
+  text-transform: capitalize;
+  margin: 1.5rem 0;
+}
+.sub-menu-item:nth-child(3) .btn{
+  border:none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 2.5px;
+  background: linear-gradient(0deg, #1f0000, #770303) ;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.sub-menu-item:nth-child(3) .btn:hover{
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  color: var(--primary-color);
+}
+.sub-menu-item:nth-child(4){
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
 
 /* CSS for category-banner-section */
 

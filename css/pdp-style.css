@@ -1,0 +1,235 @@
+/* --- Defining Varibales --- */
+
+:root {
+    --primary-color: #cc0000;
+    --secondary-color: #300606;
+    --third-color: #ffe2e2;
+    --white-color: #fff;
+    --text-color: #3d3d3d;
+    --black-color: #000;
+    --secondary-bg-color:#eaeaea77;
+    --primary-font: "poppins", sans-serif;
+    /* --secondary-font : 'Quicksand', sans-serif; */
+  }
+  
+  *,
+  *:after,
+  *:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  *:focus {
+    outline: none;
+  }
+  
+  :active,
+  :hover,
+  :focus {
+    outline: 0 !important;
+    outline-offset: 0;
+  }
+  
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--primary-color) !important ;
+  }
+  
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+  }
+  
+  /* --- Custom Scrollbar ---*/
+  
+  ::-webkit-scrollbar {
+    width: 0.325rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--white-color);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #1f0000, #770303);
+  }
+  
+  /* ---- Custome CSS Design ---- */
+  
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+  }
+  
+  h2 {
+    font-weight: 600;
+    font-size: 2.25rem;
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+  }
+  
+  h4 {
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  h5 {
+    color: var(--black-color);
+    font-family: var(--secondary-font);
+    
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+  }
+
+
+/*  Breadcrumb-section  */
+.breadcrumb {
+    height: 40px;
+    margin-bottom: 0;
+    line-height: 40px;
+    font-size: 10px;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  /* product-image-section */
+
+  .sub-img-col{
+      display:grid;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .sub-img-icon{
+      height: 90px;
+      max-width: 90px;
+      
+      padding-bottom: 10px !important;
+  }
+  .sub-img-icon img{
+      height: 90px;
+      max-width: 90px;
+      object-fit: cover; 
+  }
+  .text-over-img{
+      position: absolute;
+      bottom: 100px;
+      color: var(--white-color);
+      left: 350px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 300;
+  }
+
+  .quality-img{
+      display: inline-flex;
+      justify-content: space-between;
+  }
+  .quality-img img{
+      padding-left: 10px;
+  }
+  .quality-img img:nth-child(1){
+    position: relative;
+    top: 10px;
+  }
+  .quality-img img:nth-child(2){
+      height: 36px;
+      max-width: 212px;
+      position: relative;
+      top: 20px;
+      left: 15px;
+  }
+  .active-product-title{
+    font-weight: 600;
+  }
+
+  .rating-review{
+    font-size: 14px;
+  }
+  .rating-review .rating-star{
+    color: #f7c100;
+  }
+  .rating-review .review-count{
+    color: var(--primary-color);
+    font-weight: 300;
+  }
+  .active-pdt-price{
+    color: var(--primary-color);
+  }
+  .active-pdt-price sup{
+    font-size: 18px;
+    margin-right: 3px;
+    font-weight: 600;
+  }
+  .active-pdt-price .product-amt{
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .active-pdt-price .strick-amt{
+    color: var(--text-color);
+    font-weight: 300;
+  }
+  .tgv-offer .card{
+    border-color: var(--primary-color) !important;
+  }
+  .tgv-offer .card img{
+    max-width: 50px;
+    position: relative;
+    top: 15px;
+    left: 10px;
+  }
+  .tgv-offer .card .card-body{
+    margin-left: 10px;
+  }
+  .tgv-offer .card .card-body .card-title{
+    color: var(--primary-color);
+  }
+  .tgv-offer .card .card-body .card-title span{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    font-style: italic;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  .tgv-offer .card .card-body .card-text span{
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  /* Pick-And Upgrade-section */
+
+  .product-varient .var-img-icon img{
+    max-width: 150px;
+    margin-right: 20px;
+  }

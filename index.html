@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +21,7 @@
   <!-- Custom CSS-->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/responsive.css">
+  
 
   <!-- Owl-Carousel-JS-CDN-Links -->
 
@@ -37,7 +37,7 @@
   <div class="top-header">
     <div class="container">
       <div class="row">
-        <div class="col-md-2 col-sm-2">
+        <div class="col-md-2 col-sm-2" style="padding: 0;">
           <a class="navbar-brand" href="#"><img src="/images/tgv_logo.jpg" class="logo-main" alt="TogetherV"></a>
         </div>
         <div class="col-md-6 col-search col-sm-6 search-bar">
@@ -47,67 +47,467 @@
           </form>
         </div>
         <div class="col-md-2 col-sm-2 gift-finder-area">
-          <button class="white-btn">Gift Finder</button>
+          <button class="white-btn" type="button" data-bs-toggle="collapse" data-bs-target="#closeGiftFinder" aria-expanded="true" aria-controls="closeGiftFinder">Gift Finder</button>
+        </p>
+        <div class="collapse" id="closeGiftFinder">
+          <div class="card card-body">
+            <input class="form-control mb-4" id="exampleFormControlInput1" placeholder="Enter Pincode">
+
+            <select class="form-select mb-4" aria-label="Default select example">
+              <option selected>Occasion</option>
+              <option value="1">Birthday</option>
+              <option value="2">Anniversary</option>
+              <option value="3">Congratulations</option>
+              <option value="4">Congratulations</option>
+              <option value="5">I Am Sorry</option>
+              <option value="6">Thinking Of You</option>
+              <option value="7">House Warming</option>
+              <option value="8">Thank You</option>
+              <option value="9">Miss You</option>
+              <option value="10">Get Well Soon</option>
+            </select>
+
+            <select class="form-select mb-4" aria-label="Default select example">
+              <option selected>Gift type</option>
+              <option value="1">All Gifts</option>
+              <option value="2">Bestsellers</option>
+              <option value="3">Cakes</option>
+              <option value="4">Flowers</option>
+              <option value="5">Personalised Gifts</option>
+              <option value="6">Premium Gifts</option>
+              <option value="7">Digital Gifts</option>
+              <option value="8">Experience Gifting</option>
+            </select>
+
+            <button class="main-btn mb-1" style="border: none;">Find Gifts</button>
+          </div>
+        </div>
         </div>
         <div class="col-md-2 col-sm-2 d-flex top-header-icons">
           <a class="nav-link top-nav-icon" aria-current="page" href="#"><i class="fa-solid fa-heart"></i></a>
-          <a class="nav-link top-nav-icon" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-          <a class="nav-link top-nav-icon" href="#" id="navbarDropdown"><i class="fa-solid fa-user"></i></a>
-          <a class="nav-link top-nav-icon" href="#"><i class="fa-solid fa-location-dot"></i></a>
+          <a class="nav-link top-nav-icon" href="#" id="navbarDropdown" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-user"></i></a>
+          <a class="nav-link top-nav-icon" href="#" data-bs-toggle="modal" data-bs-target="#city-location"><i class="fa-solid fa-location-dot"></i></a>
         </div>
       </div>
     </div>
   </div>
 
+
+<!-- Login Popup -->
+<div class="login-popup">
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 800px !important;">
+      <div class="modal-content">
+        <div class="modal-body" style="padding: 0px;">
+         <div class="row">
+           <div class="col-md-5">
+             <img src="/images/login-banner 1.png" alt="">
+           </div>
+           <div class="col-md-7">
+            <div class="login-field-section">
+              <button type="button" class="btn-close popup-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="mt-5 mb-4">TogetherV Login</h4>
+            <form>
+              <div class="input-group mb-3 login-email-input">
+                <span class="input-group-text login-mail-icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="text" class="form-control login-input" aria-label="Amount (to the nearest dollar)"
+                  placeholder="Enter your email id">
+              </div>
+              <a href="#" class="email-btm-txt">Use phone number instead</a>
+              
+              <button class="main-btn login-btn">Login</button>
+              <a href="#" class="signup-btm-txt">Signup as new user</a>
+              </form>
+              <div class="or-seprate">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="line"></div>
+                  </div>
+                  <div class="col-md-2">or</div>
+                  <div class="col-md-5">
+                    <div class="line"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="social-login">
+                <button class="fb-btn"><i class="fa-brands fa-facebook"></i> Facebook Login</button>
+                <button class="google-btn"><i class="fa-brands fa-google"></i> Google Login</button>
+              </div>
+            </div>
+           </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- City-popup -->
+<div class="modal fade" id="city-location" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="max-width: 650px !important;">
+    <div class="modal-content">
+      <div class="modal-header city-name-header">
+        <h5 class="modal-title city-name-title" id="exampleModalLabel">Pick a city to view experiences</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row mb-4">
+          <div class="col-md-3 align-center">
+            <div class="cityname">
+              <img class="city-icon mb-3" src="/images/city-icon/Delhi.png" alt="">
+              <h5>Delhi NCR</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="cityname">
+              <img class="city-icon mb-3" src="/images/city-icon/bangalore.png" alt="">
+              <h5>Bangalore</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="cityname">
+              <img class="city-icon mb-3" src="/images/city-icon/mumbai.png" alt="">
+              <h5>Mumbai</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="cityname">
+              <img class="city-icon mb-3" src="/images/city-icon/Kolkata.png" alt="">
+              <h5>Kolkata</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-3 align-center">
+            <div class="cityname">
+              <img class="city-icon mb-3" src="/images/city-icon/Pune.png" alt="">
+              <h5>Pune</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="cityname">
+              <img class="city-icon mb-3" src="/images/city-icon/jaipur.png" alt="">
+              <h5>Jaipur</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="cityname">
+              <img class="city-icon mb-3" src="/images/city-icon/ahmedabad.png" alt="">
+              <h5>Ahmedabad</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="cityname">
+              <img class="city-icon mb-3" src="/images/city-icon/hyderabad.png" alt="">
+              <h5>Hyderabad</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
   
   <!-- Navigation Bar-->
 
   <div class="menu-bar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Birthday</a>
+    <div class = "main-wrapper">
+      <nav class = "navigation">
+        <div class = "brand-and-icon">
+          <button type = "button" class = "navigation-toggler">
+            <i class = "fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class = "navigation-collapse">
+          <ul class = "navigation-nav">
+            <li>
+              <a href = "#" class = "menu-link">
+                Balloon Surprise
+                <span class = "drop-icon">
+                  <i class = "fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div class = "sub-menu">
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>top categories</h4>
+                  <ul>
+                    <li><a href = "#">Balloon Decoration</a></li>
+                    <li><a href = "#">Anniversary</a></li>
+                    <li><a href = "#">Birthday</a></li>
+                    <li><a href = "#">Baby Shower</a></li>
+                    <li><a href = "#">Car Boot Balloon Bouquet</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>other categories</h4>
+                  <ul>
+                    <li><a href = "#">Musical Melodies</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h2>all Decoration for home</h2>
+                  <button type = "button" class = "btn">Book here</button>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <img src = "images/balloon.jpg" alt = "product image">
+                </div>
+                <!-- end of item -->
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Anniversary</a>
+
+            <li>
+              <a href = "#" class = "menu-link">
+                Romantic Experience
+                <span class = "drop-icon">
+                  <i class = "fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div class = "sub-menu">
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>top categories</h4>
+                  <ul>
+                    <li><a href = "#">Candlelight Dinner</a></li>
+                    <li><a href = "#">Rooftop</a></li>
+                    <li><a href = "#">5 Star Hotels</a></li>
+                    <li><a href = "#">Dinner with stay</a></li>
+                    <li><a href = "#">Poolside</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>other categories</h4>
+                  <ul>
+                    <li><a href = "#">Decarated Staycation</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h2>Stunning And Beautiful Experience</h2>
+                  <button type = "button" class = "btn">Book here</button>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <img src = "images/dinner.jpg" alt = "product image">
+                </div>
+                <!-- end of item -->
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cake</a>
+
+            <li>
+              <a href = "#" class = "menu-link">
+                Love Combos
+                <span class = "drop-icon">
+                  <i class = "fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div class = "sub-menu">
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>top categories</h4>
+                  <ul>
+                    <li><a href = "#">Flower Bouquet</a></li>
+                    <li><a href = "#">Chocolate Bouquet</a></li>
+                    <li><a href = "#">Cake</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>other categories</h4>
+                  <ul>
+                    <li><a href = "#">Romantic Gifts</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h2>the Beautiful flowers are here</h2>
+                  <button type = "button" class = "btn">Book here</button>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <img src = "images/flower.jpg" alt = "product image">
+                </div>
+                <!-- end of item -->
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Personalised</a>
+
+            <li>
+              <a href = "#" class = "menu-link">
+                Personalised Gifts
+                <span class = "drop-icon">
+                  <i class = "fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div class = "sub-menu">
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>top categories</h4>
+                  <ul>
+                    <li><a href = "#">Video</a></li>
+                    <li><a href = "#">App</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h2>gear up for sports & adventures</h2>
+                  <button type = "button" class = "btn">Book here</button>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <img src = "images/personalised-gift.jpg" alt = "product image">
+                </div>
+                <!-- end of item -->
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">More Gifts</a>
+
+            <li>
+              <a href = "#" class = "menu-link">
+                Photoshoot
+                <span class = "drop-icon">
+                  <i class = "fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div class = "sub-menu">
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>top categories</h4>
+                  <ul>
+                    <li><a href = "#">Video</a></li>
+                    <li><a href = "#">App</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h2>gear up for sports & adventures</h2>
+                  <button type = "button" class = "btn">Book here</button>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <img src = "images/personalised-gift.jpg" alt = "product image">
+                </div>
+                <!-- end of item -->
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Surprise</a>
+
+            <li>
+              <a href = "#" class = "menu-link">
+                Activities
+                <span class = "drop-icon">
+                  <i class = "fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div class = "sub-menu">
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>top categories</h4>
+                  <ul>
+                    <li><a href = "#">Video</a></li>
+                    <li><a href = "#">App</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h2>gear up for sports & adventures</h2>
+                  <button type = "button" class = "btn">Book here</button>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <img src = "images/personalised-gift.jpg" alt = "product image">
+                </div>
+                <!-- end of item -->
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Occasion</a>
+
+            <li>
+              <a href = "#" class = "menu-link">
+                Personalised Gifts
+                <span class = "drop-icon">
+                  <i class = "fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div class = "sub-menu">
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h4>top categories</h4>
+                  <ul>
+                    <li><a href = "#">Video</a></li>
+                    <li><a href = "#">App</a></li>
+                  </ul>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <h2>gear up for sports & adventures</h2>
+                  <button type = "button" class = "btn">Book here</button>
+                </div>
+                <!-- end of item -->
+                <!-- item -->
+                <div class = "sub-menu-item">
+                  <img src = "images/personalised-gift.jpg" alt = "product image">
+                </div>
+                <!-- end of item -->
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">New Year</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Flowers</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav d-flex me-2">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Need Help?</a>
-            </li>
+
+            <li>
+              <a href = "#" class = "menu-link">
+                Need Help?
+              </a>
+              </li>
+
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
+
+  
   </div>
+
+  
 
   <!-- Slider Banner (1080x480) & Side Banner (305x430) -->
 
@@ -962,6 +1362,38 @@
     </div>
   </div>
 
+  <!-- Script for navigation menu bar -->
+
+      <!--jQuery-->
+      <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+  
+  //   var _gaq = _gaq || [];
+  //   _gaq.push(['_setAccount', 'UA-36251023-1']);
+  //   _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  //   _gaq.push(['_trackPageview']);
+  
+  //   (function() {
+  //     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  //     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  //     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  //   })();
+  
+  // </script><script>
+  // try {
+  //   fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+  //     return true;
+  //   }).catch(function(e) {
+  //     var carbonScript = document.createElement("script");
+  //     carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+  //     carbonScript.id = "_carbonads_js";
+  //     document.getElementById("carbon-block").appendChild(carbonScript);
+  //   });
+  // } catch (error) {
+  //   console.log(error);
+  // }
+  // </script>
+
 
      <!-- Owl-Carousel-JS-CDN-Links -->
      <script
@@ -998,6 +1430,8 @@
   
 
   <!--Bootstrap JS-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>

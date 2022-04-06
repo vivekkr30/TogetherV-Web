@@ -110,6 +110,11 @@
     font-weight: 400;
   }
 
+  .wrapper {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
 
 /*  Breadcrumb-section  */
 .breadcrumb {
@@ -229,7 +234,125 @@
 
   /* Pick-And Upgrade-section */
 
-  .product-varient .var-img-icon img{
-    max-width: 150px;
+  .product-varient table tbody tr td{
+    display: inline-block;
     margin-right: 20px;
+    cursor: pointer;
   }
+  .product-varient table tbody tr td img{
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    width: 80px;
+  }
+  .product-varient table tbody tr td .var-opt{
+    color: var(--text-color);
+  }
+  .product-varient .sub-img-var .active{
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+  }
+  .product-varient table tbody tr td .var-price{
+    color:var(--primary-color);
+    line-height: 0;
+    font-weight: 500;
+  }
+  .sub-img-var:nth-child(4){
+    position: relative;
+
+    bottom: 28px;
+  }
+  .sub-img-var .plus{
+    color: var(--white-color);
+    height: 80px;
+    width: 80px;
+    line-height: 2.8;
+    border-radius: 5px !important;
+    font-size: 28px;
+    font-weight: 200;
+    text-align: center;
+    background-color:#4d4d4de1;
+  }
+
+  /* delivey_date & Delivey_time */
+
+  .imp-txt{
+    color: var(--primary-color);
+    font-size: 12px;
+  }
+  .calendar-btn .input-group-text{
+    background-color: transparent;
+    padding: 20px;
+    color: rgb(155, 155, 155);
+    font-size: 18px;
+    border-right: none;
+  }
+  .calendar-btn .form-control{
+    border-left: none;
+  }
+  .time-button{
+    width: 100%;
+    padding: 17px;
+    color: #7e858d;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+  }
+  .time-btn .fa-clock{
+    margin-right: 20px;
+    color: rgb(155, 155, 155);
+    font-size: 18px;
+  }
+  /* Buy Button & Wish List-button */
+  .book-btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 22px;
+  }
+  .wishlist-btn{
+    margin-top: 0px;
+    width: 100%;
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  /* product-description and why shop with TGV */
+
+.product-description .why-icon{
+  cursor: pointer;
+  max-width: 50px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.123);
+  border-radius: 5px;
+  margin: 7px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.why-shop ul li{
+  cursor: pointer;
+  list-style: none;
+}
+.why-txt{
+  line-height: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.product-description .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  color: var(--primary-color) !important;
+}
+.product-description .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+  color: var(--text-color) !important;
+}
+
+.inclusions-icon .inclusion img{
+  border-radius: 50px;
+  max-width: 50px;
+  margin-right: 10px;
+}
+.inclusions-icon .inclusion span{
+  font-size: 14px;
+  font-weight: 500;
+}

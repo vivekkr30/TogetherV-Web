@@ -34,58 +34,62 @@
 </head>
 
 <body>
-
   <!-- Top Header Bar-->
+
   <div class="top-header">
     <div class="container">
       <div class="row">
         <div class="col-md-2 col-sm-2" style="padding: 0;">
           <a class="navbar-brand" href="#"><img src="/images/tgv_logo.jpg" class="logo-main" alt="TogetherV"></a>
         </div>
+
         <div class="col-md-6 col-search col-sm-6 search-bar">
           <form action="#">
             <input type="search" class="search-data" placeholder="Search">
             <button type="submit" class="fas fa-search search-button"></button>
           </form>
         </div>
+
+
         <div class="col-md-2 col-sm-2 gift-finder-area">
-          <button class="white-btn" type="button" data-bs-toggle="collapse" data-bs-target="#closeGiftFinder"
-            aria-expanded="true" aria-controls="closeGiftFinder">Gift Finder</button>
-          </p>
-          <div class="collapse" id="closeGiftFinder">
-            <div class="card card-body">
-              <input class="form-control mb-4" id="exampleFormControlInput1" placeholder="Enter Pincode">
+          <div class="white-btn gift-finder-btn">
+            Gift Finder
+            <div class="gift-finder-opt" id="closeGiftFinder">
+              <div class="card card-body">
+                <input class="form-control mb-4" id="exampleFormControlInput1" placeholder="Enter Pincode">
 
-              <select class="form-select mb-4" aria-label="Default select example">
-                <option selected>Occasion</option>
-                <option value="1">Birthday</option>
-                <option value="2">Anniversary</option>
-                <option value="3">Congratulations</option>
-                <option value="4">Congratulations</option>
-                <option value="5">I Am Sorry</option>
-                <option value="6">Thinking Of You</option>
-                <option value="7">House Warming</option>
-                <option value="8">Thank You</option>
-                <option value="9">Miss You</option>
-                <option value="10">Get Well Soon</option>
-              </select>
+                <select class="form-select mb-4" aria-label="Default select example">
+                  <option selected>Occasion</option>
+                  <option value="1">Birthday</option>
+                  <option value="2">Anniversary</option>
+                  <option value="3">Congratulations</option>
+                  <option value="4">Congratulations</option>
+                  <option value="5">I Am Sorry</option>
+                  <option value="6">Thinking Of You</option>
+                  <option value="7">House Warming</option>
+                  <option value="8">Thank You</option>
+                  <option value="9">Miss You</option>
+                  <option value="10">Get Well Soon</option>
+                </select>
 
-              <select class="form-select mb-4" aria-label="Default select example">
-                <option selected>Gift type</option>
-                <option value="1">All Gifts</option>
-                <option value="2">Bestsellers</option>
-                <option value="3">Cakes</option>
-                <option value="4">Flowers</option>
-                <option value="5">Personalised Gifts</option>
-                <option value="6">Premium Gifts</option>
-                <option value="7">Digital Gifts</option>
-                <option value="8">Experience Gifting</option>
-              </select>
+                <select class="form-select mb-4" aria-label="Default select example">
+                  <option selected>Gift type</option>
+                  <option value="1">All Gifts</option>
+                  <option value="2">Bestsellers</option>
+                  <option value="3">Cakes</option>
+                  <option value="4">Flowers</option>
+                  <option value="5">Personalised Gifts</option>
+                  <option value="6">Premium Gifts</option>
+                  <option value="7">Digital Gifts</option>
+                  <option value="8">Experience Gifting</option>
+                </select>
 
-              <button class="main-btn mb-1" style="border: none;">Find Gifts</button>
+                <button class="main-btn mb-1" style="border: none;">Find Gifts</button>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="col-md-2 col-sm-2 d-flex top-header-icons">
           <a class="nav-link top-nav-icon" aria-current="page" href="#"><i class="fa-solid fa-heart"></i></a>
           <a class="nav-link top-nav-icon" href="#" id="navbarDropdown" data-bs-toggle="modal"
@@ -93,9 +97,11 @@
           <a class="nav-link top-nav-icon" href="#" data-bs-toggle="modal" data-bs-target="#city-location"><i
               class="fa-solid fa-location-dot"></i></a>
         </div>
+
       </div>
     </div>
   </div>
+
 
 
   <!-- Login Popup -->
@@ -648,9 +654,47 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <button class="time-button">
+                  <button class="time-button" data-bs-toggle="modal" data-bs-target="#choosetime">
                     <span class="time-btn"><i class="fa-solid fa-clock"></i> Pick Delivery Time</span>
                   </button>
+                </div>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="choosetime" tabindex="-1" aria-labelledby="choosetimeLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Select Time Slot For Your Delivery</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                      <p class="imp-txt">&#9432 Your gift will be delivered anytime in between the selected time-slot.
+                      </p>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                          checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          10:00 AM to 02:00 PM
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                          checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          02:00 PM to 06:00 PM
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                          checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          06:00 PM to 10:00 PM
+                        </label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -658,8 +702,422 @@
               <div class="row">
                 <p class="imp-txt">&#9432 Personalised Message can be added on checkout</p>
                 <div class="col-md-10">
-                  <button class="main-btn book-btn">Book Now</button>
+                  <button class="main-btn book-btn" data-bs-toggle="modal" data-bs-target="#addonpopup">Book
+                    Now</button>
                 </div>
+                <!-- Addon - Popup -->
+                <!-- Modal -->
+                <div class="modal fade" id="addonpopup" tabindex="-1" aria-labelledby="addonpopupLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add on something to make it extra special!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-3">
+
+                            <div class="addon">
+                              <!-- Addon-Image Carusal -->
+                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="/images/active-product-img/addon-img-1.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="/images/active-product-img/addon-img-2.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                                <!-- Addon-price -->
+                              <div class="addon-price">
+                                <p>₹99</p>
+                              </div>
+                              </div>
+                              
+                              <!-- addon name -->
+                              <h5 class="pt-2 mb-3">Cup Cake</h5>
+                              <!-- addon-opt-dropdown -->
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Flavour</option>
+                                <option value="1">Chocolate</option>
+                                <option value="2">Vanila</option>
+                                <option value="3">Butterscotch</option>
+                              </select>
+                              <!-- addon-counter -->
+                              <div class="addon-counter">
+                                <button class="addon-minus">-</button>
+                                <p class="addon-num">0</p>
+                                <button class="addon-plus">+</button>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="addon">
+                              <!-- Addon-Image Carusal -->
+                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="/images/active-product-img/addon-img-1.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="/images/active-product-img/addon-img-2.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                                <!-- Addon-price -->
+                              <div class="addon-price">
+                                <p>₹99</p>
+                              </div>
+                              </div>
+                              
+                              <!-- addon name -->
+                              <h5 class="pt-2 mb-3">Cup Cake</h5>
+                              <!-- addon-opt-dropdown -->
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Flavour</option>
+                                <option value="1">Chocolate</option>
+                                <option value="2">Vanila</option>
+                                <option value="3">Butterscotch</option>
+                              </select>
+                              <!-- addon-counter -->
+                              <div class="addon-counter">
+                                <button class="addon-minus">-</button>
+                                <p class="addon-num">0</p>
+                                <button class="addon-plus">+</button>
+                              </div>
+
+                            </div>
+
+                          </div>
+                          <div class="col-md-3">
+                            <div class="addon">
+                              <!-- Addon-Image Carusal -->
+                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="/images/active-product-img/addon-img-1.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="/images/active-product-img/addon-img-2.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                                <!-- Addon-price -->
+                              <div class="addon-price">
+                                <p>₹99</p>
+                              </div>
+                              </div>
+                              
+                              <!-- addon name -->
+                              <h5 class="pt-2 mb-3">Cup Cake</h5>
+                              <!-- addon-opt-dropdown -->
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Flavour</option>
+                                <option value="1">Chocolate</option>
+                                <option value="2">Vanila</option>
+                                <option value="3">Butterscotch</option>
+                              </select>
+                              <!-- addon-counter -->
+                              <div class="addon-counter">
+                                <button class="addon-minus">-</button>
+                                <p class="addon-num">0</p>
+                                <button class="addon-plus">+</button>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="addon">
+                              <!-- Addon-Image Carusal -->
+                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="/images/active-product-img/addon-img-1.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="/images/active-product-img/addon-img-2.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                                <!-- Addon-price -->
+                              <div class="addon-price">
+                                <p>₹99</p>
+                              </div>
+                              </div>
+                              
+                              <!-- addon name -->
+                              <h5 class="pt-2 mb-3">Cup Cake</h5>
+                              <!-- addon-opt-dropdown -->
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Flavour</option>
+                                <option value="1">Chocolate</option>
+                                <option value="2">Vanila</option>
+                                <option value="3">Butterscotch</option>
+                              </select>
+                              <!-- addon-counter -->
+                              <div class="addon-counter">
+                                <button class="addon-minus">-</button>
+                                <p class="addon-num">0</p>
+                                <button class="addon-plus">+</button>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row pt-4">
+                          <div class="col-md-3">
+
+                            <div class="addon">
+                              <!-- Addon-Image Carusal -->
+                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="/images/active-product-img/addon-img-1.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="/images/active-product-img/addon-img-2.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                                <!-- Addon-price -->
+                              <div class="addon-price">
+                                <p>₹99</p>
+                              </div>
+                              </div>
+                              
+                              <!-- addon name -->
+                              <h5 class="pt-2 mb-3">Cup Cake</h5>
+                              <!-- addon-opt-dropdown -->
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Flavour</option>
+                                <option value="1">Chocolate</option>
+                                <option value="2">Vanila</option>
+                                <option value="3">Butterscotch</option>
+                              </select>
+                              <!-- addon-counter -->
+                              <div class="addon-counter">
+                                <button class="addon-minus">-</button>
+                                <p class="addon-num">0</p>
+                                <button class="addon-plus">+</button>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="addon">
+                              <!-- Addon-Image Carusal -->
+                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="/images/active-product-img/addon-img-1.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="/images/active-product-img/addon-img-2.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                                <!-- Addon-price -->
+                              <div class="addon-price">
+                                <p>₹99</p>
+                              </div>
+                              </div>
+                              
+                              <!-- addon name -->
+                              <h5 class="pt-2 mb-3">Cup Cake</h5>
+                              <!-- addon-opt-dropdown -->
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Flavour</option>
+                                <option value="1">Chocolate</option>
+                                <option value="2">Vanila</option>
+                                <option value="3">Butterscotch</option>
+                              </select>
+                              <!-- addon-counter -->
+                              <div class="addon-counter">
+                                <button class="addon-minus">-</button>
+                                <p class="addon-num">0</p>
+                                <button class="addon-plus">+</button>
+                              </div>
+
+                            </div>
+
+                          </div>
+                          <div class="col-md-3">
+                            <div class="addon">
+                              <!-- Addon-Image Carusal -->
+                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="/images/active-product-img/addon-img-1.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="/images/active-product-img/addon-img-2.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                                <!-- Addon-price -->
+                              <div class="addon-price">
+                                <p>₹99</p>
+                              </div>
+                              </div>
+                              
+                              <!-- addon name -->
+                              <h5 class="pt-2 mb-3">Cup Cake</h5>
+                              <!-- addon-opt-dropdown -->
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Flavour</option>
+                                <option value="1">Chocolate</option>
+                                <option value="2">Vanila</option>
+                                <option value="3">Butterscotch</option>
+                              </select>
+                              <!-- addon-counter -->
+                              <div class="addon-counter">
+                                <button class="addon-minus">-</button>
+                                <p class="addon-num">0</p>
+                                <button class="addon-plus">+</button>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="addon">
+                              <!-- Addon-Image Carusal -->
+                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="/images/active-product-img/addon-img-1.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="/images/active-product-img/addon-img-2.png" class="d-block w-100"
+                                      alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                                <!-- Addon-price -->
+                              <div class="addon-price">
+                                <p>₹99</p>
+                              </div>
+                              </div>
+                              
+                              <!-- addon name -->
+                              <h5 class="pt-2 mb-3">Cup Cake</h5>
+                              <!-- addon-opt-dropdown -->
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Flavour</option>
+                                <option value="1">Chocolate</option>
+                                <option value="2">Vanila</option>
+                                <option value="3">Butterscotch</option>
+                              </select>
+                              <!-- addon-counter -->
+                              <div class="addon-counter">
+                                <button class="addon-minus">-</button>
+                                <p class="addon-num">0</p>
+                                <button class="addon-plus">+</button>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="main-btn">Continue</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="col-md-2">
                   <button class="white-btn wishlist-btn"><i class="fa-solid fa-heart"></i></button>
                 </div>
@@ -680,10 +1138,18 @@
           <!-- Description Tab -->
           <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <button class="nav-link description-tab active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Inclusion</button>
-              <button class="nav-link description-tab" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">About Products</button>
-              <button class="nav-link description-tab" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">FAQ</button>
-              <button class="nav-link description-tab" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Review</button>
+              <button class="nav-link description-tab active" id="nav-home-tab" data-bs-toggle="tab"
+                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                aria-selected="true">Inclusion</button>
+              <button class="nav-link description-tab" id="nav-profile-tab" data-bs-toggle="tab"
+                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                aria-selected="false">About Products</button>
+              <button class="nav-link description-tab" id="nav-contact-tab" data-bs-toggle="tab"
+                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                aria-selected="false">FAQ</button>
+              <button class="nav-link description-tab" id="nav-contact-tab" data-bs-toggle="tab"
+                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                aria-selected="false">Review</button>
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
@@ -692,17 +1158,17 @@
               <div class="row inclusions-icon">
                 <div class="col-md-4">
                   <div class="inclusion">
-                    <img src="/images/active-product-img/flower-1.png" alt="">  <span>3 Red Roses</span>
+                    <img src="/images/active-product-img/flower-1.png" alt=""> <span>3 Red Roses</span>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="inclusion">
-                    <img src="/images/active-product-img/flower-2.png" alt="">  <span>3 Yellow Roses</span>
+                    <img src="/images/active-product-img/flower-2.png" alt=""> <span>3 Yellow Roses</span>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="inclusion">
-                    <img src="/images/active-product-img/flower-3.png" alt="">  <span>3 White Roses</span>
+                    <img src="/images/active-product-img/flower-3.png" alt=""> <span>3 White Roses</span>
                   </div>
                 </div>
                 <div class="row pt-4">
@@ -717,41 +1183,46 @@
 
               <p class="pt-4 mb-2" style="font-weight: 500;">Flowers Trivia:</p>
               <p>
-                The world's most expensive rose is a 2006 variety by famed rose breeder David Austin that was christened Juliet. Breeding the rose took a total 15 years and cost 5 million dollars!
+                The world's most expensive rose is a 2006 variety by famed rose breeder David Austin that was christened
+                Juliet. Breeding the rose took a total 15 years and cost 5 million dollars!
               </p>
 
               <p class="pt-4 mb-2" style="font-weight: 500;">Flowers Trivia:</p>
               <p>
-                The world's most expensive rose is a 2006 variety by famed rose breeder David Austin that was christened Juliet. Breeding the rose took a total 15 years and cost 5 million dollars!
+                The world's most expensive rose is a 2006 variety by famed rose breeder David Austin that was christened
+                Juliet. Breeding the rose took a total 15 years and cost 5 million dollars!
               </p>
 
               <p class="pt-4 mb-2" style="font-weight: 500;">Flowers Trivia:</p>
               <p>
-                The world's most expensive rose is a 2006 variety by famed rose breeder David Austin that was christened Juliet. Breeding the rose took a total 15 years and cost 5 million dollars!
+                The world's most expensive rose is a 2006 variety by famed rose breeder David Austin that was christened
+                Juliet. Breeding the rose took a total 15 years and cost 5 million dollars!
               </p>
-              
+
             </div>
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
               <p class="pt-4 mb-2" style="font-weight: 500;">Flowers Trivia:</p>
               <p>
-                The world's most expensive rose is a 2006 variety by famed rose breeder David Austin that was christened Juliet. Breeding the rose took a total 15 years and cost 5 million dollars!
+                The world's most expensive rose is a 2006 variety by famed rose breeder David Austin that was christened
+                Juliet. Breeding the rose took a total 15 years and cost 5 million dollars!
               </p>
 
               <p class="pt-4 mb-2" style="font-weight: 500;">Please Note:</p>
               <p>
-                <ul>
-                  <li> The Ribbons can be saved and used later for decorating gifts!</li>
-                  <li>Green Fillers may vary as per local and seasonal availability.</li>
-                  <li>Due to government policies, non woven fabric which is used to wrap this bouquet will be substituted by paper wrapping in Mumbai, Pune & Bangalore</li>
-                  <li><b>Country of Origin: India</b></li>
-                </ul>
+              <ul>
+                <li> The Ribbons can be saved and used later for decorating gifts!</li>
+                <li>Green Fillers may vary as per local and seasonal availability.</li>
+                <li>Due to government policies, non woven fabric which is used to wrap this bouquet will be substituted
+                  by paper wrapping in Mumbai, Pune & Bangalore</li>
+                <li><b>Country of Origin: India</b></li>
+              </ul>
               </p>
 
             </div>
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
           </div>
-          
+
         </div>
         <div class="col-md-3 mt-4">
           <!-- Why-Shop-With-TogetherV -->
@@ -759,21 +1230,25 @@
             <h4 class="mb-4 mt-4">Why shop from TogetherV</h4>
             <ul>
               <li>
-                <span><img class="why-icon" src="/images/active-product-img/why-icon (1).png" alt=""> <span class="why-txt">Get
+                <span><img class="why-icon" src="/images/active-product-img/why-icon (1).png" alt=""> <span
+                    class="why-txt">Get
                     Delivered on time</span></span>
               </li>
               <li>
-                <span><img class="why-icon" src="/images/active-product-img/why-icon (2).png" alt=""> <span class="why-txt">
-                  Best Prices & Offers</span></span>
+                <span><img class="why-icon" src="/images/active-product-img/why-icon (2).png" alt=""> <span
+                    class="why-txt">
+                    Best Prices & Offers</span></span>
               </li>
               <li>
-                <span><img class="why-icon" src="/images/active-product-img/why-icon (3).png" alt=""> <span class="why-txt">
-                  Wide Assortment</span></span>
+                <span><img class="why-icon" src="/images/active-product-img/why-icon (3).png" alt=""> <span
+                    class="why-txt">
+                    Wide Assortment</span></span>
               </li>
               <li>
-                <span><img class="why-icon" src="/images/active-product-img/why-icon (4).png" alt=""> <span class="why-txt">
-                  1 Million+ Happy Customer
-                </span></span>
+                <span><img class="why-icon" src="/images/active-product-img/why-icon (4).png" alt=""> <span
+                    class="why-txt">
+                    1 Million+ Happy Customer
+                  </span></span>
               </li>
             </ul>
           </div>
@@ -782,138 +1257,138 @@
     </div>
   </div>
 
-    <!-- Find-More-Section -->
+  <!-- Find-More-Section -->
 
+  <div class="container">
+    <div class="find-more-section wrapper">
+      <h4>Find More</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="category-card">
+            <img src="/images/find-more-category-1.jpg" alt="">
+            <div class="category-title">
+              <p>Balloon Surprise</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="category-card">
+            <img src="/images/find-more-category-2.jpg" alt="">
+            <div class="category-title">
+              <p>Kids Balloon Decoration</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="category-card">
+            <img src="/images/find-more-category-3.jpg" alt="">
+            <div class="category-title">
+              <p>Wall Balloon Decoration</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="category-card">
+            <img src="/images/find-more-category-4.jpg" alt="">
+            <div class="category-title">
+              <p>Balloon Decoration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Why - TogetherV - Section -->
+
+  <div class="container">
+    <div class="why-section wrapper">
+      <h4>Why TogetherV</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="icon-card">
+            <img class="why-icon" src="/images/delivery-1.png" alt="">
+            <p>Delivery Across India<span>We deliver gifts to over 70 countries</span></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="icon-card">
+            <img class="why-icon" src="/images/payment-1.png" alt="">
+            <p>100% Safe & Secure Payments<span>Pay using secure payment methods</span></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="icon-card">
+            <img class="why-icon" src="/images/product-range-1.png" alt="">
+            <p>Wide Range of Products<span>We Offering vast variety of products</span></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="icon-card">
+            <img class="why-icon" src="/images/customer-1.png" alt="">
+            <p>1 Million+<span>Happy Customer</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BLOG-SECTION -->
+
+  <div class="container">
+    <div class="blog-section wrapper">
+      <h4>Recent Blog</h4>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="blog-post-1" id="blog-past">
+            <img id="blog-image" src="/images/blog-img-5.jpeg" alt="" srcset="">
+            <div class="blog-title-1">
+              <h4>Funny Things Married Couples Fight Over<span class="author-name-time">Ishita Bansal |
+                  10-03-2022</span></h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="blog-post-2">
+            <img src="/images/blog-img-6.png" alt="">
+            <div class="blog-title-2">
+              <h4>Know Why We Celebrate Holi<span class="author-name-time">Ishita Bansal | 10-03-2022</span></h4>
+            </div>
+          </div>
+
+          <div class="blog-post-2">
+            <img src="/images/blog-img-1.jpeg" alt="">
+            <div class="blog-title-2 blog-title-3">
+              <h4>Tips to Stay Happy<span class="author-name-time">Ishita Bansal | 10-03-2022</span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MOBILE-APP-DOWNLOAD-SECTION -->
+
+  <div class="container-fluid mobile-app-section">
     <div class="container">
-      <div class="find-more-section wrapper">
-        <h4>Find More</h4>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="category-card">
-              <img src="/images/find-more-category-1.jpg" alt="">
-              <div class="category-title">
-                <p>Balloon Surprise</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="category-card">
-              <img src="/images/find-more-category-2.jpg" alt="">
-              <div class="category-title">
-                <p>Kids Balloon Decoration</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="category-card">
-              <img src="/images/find-more-category-3.jpg" alt="">
-              <div class="category-title">
-                <p>Wall Balloon Decoration</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="category-card">
-              <img src="/images/find-more-category-4.jpg" alt="">
-              <div class="category-title">
-                <p>Balloon Decoration</p>
-              </div>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5 mobile-download-info">
+          <h3>Design Your Perfect Day</h3>
+          <p>Get the best of gifts & decoration, all in one <br> place. Download the app today!</p>
+          <a href="" class="download-btn"><img class="btn-img" src="/images/app-store.png" alt=""></a>
+          <a href="" class="download-btn"><img class="btn-img" src="/images/play-store.png" alt=""></a>
         </div>
       </div>
     </div>
-  
+  </div>
 
-    <!-- Why - TogetherV - Section -->
 
-    <div class="container">
-      <div class="why-section wrapper">
-        <h4>Why TogetherV</h4>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="icon-card">
-              <img class="why-icon" src="/images/delivery-1.png" alt="">
-              <p>Delivery Across India<span>We deliver gifts to over 70 countries</span></p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="icon-card">
-              <img class="why-icon" src="/images/payment-1.png" alt="">
-              <p>100% Safe & Secure Payments<span>Pay using secure payment methods</span></p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="icon-card">
-              <img class="why-icon" src="/images/product-range-1.png" alt="">
-              <p>Wide Range of Products<span>We Offering vast variety of products</span></p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="icon-card">
-              <img class="why-icon" src="/images/customer-1.png" alt="">
-              <p>1 Million+<span>Happy Customer</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-
-    <!-- BLOG-SECTION -->
-
-    <div class="container">
-      <div class="blog-section wrapper">
-        <h4>Recent Blog</h4>
-        <div class="row">
-          <div class="col-md-7">
-            <div class="blog-post-1" id="blog-past">
-              <img id="blog-image" src="/images/blog-img-5.jpeg" alt="" srcset="">
-              <div class="blog-title-1">
-                <h4>Funny Things Married Couples Fight Over<span class="author-name-time">Ishita Bansal |
-                    10-03-2022</span></h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="blog-post-2">
-              <img src="/images/blog-img-6.png" alt="">
-              <div class="blog-title-2">
-                <h4>Know Why We Celebrate Holi<span class="author-name-time">Ishita Bansal | 10-03-2022</span></h4>
-              </div>
-            </div>
-  
-            <div class="blog-post-2">
-              <img src="/images/blog-img-1.jpeg" alt="">
-              <div class="blog-title-2 blog-title-3">
-                <h4>Tips to Stay Happy<span class="author-name-time">Ishita Bansal | 10-03-2022</span></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  
-    <!-- MOBILE-APP-DOWNLOAD-SECTION -->
-  
-    <div class="container-fluid mobile-app-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-5 mobile-download-info">
-            <h3>Design Your Perfect Day</h3>
-            <p>Get the best of gifts & decoration, all in one <br> place. Download the app today!</p>
-            <a href="" class="download-btn"><img class="btn-img" src="/images/app-store.png" alt=""></a>
-            <a href="" class="download-btn"><img class="btn-img" src="/images/play-store.png" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-
-   <!-- Footer - Section -->
-   <div class="footer-section">
+  <!-- Footer - Section -->
+  <div class="footer-section">
     <div class="container">
       <div class="row footer-row-1">
 

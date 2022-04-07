@@ -40,59 +40,66 @@
         <div class="col-md-2 col-sm-2" style="padding: 0;">
           <a class="navbar-brand" href="#"><img src="/images/tgv_logo.jpg" class="logo-main" alt="TogetherV"></a>
         </div>
+      
         <div class="col-md-6 col-search col-sm-6 search-bar">
           <form action="#">
             <input type="search" class="search-data" placeholder="Search">
             <button type="submit" class="fas fa-search search-button"></button>
           </form>
         </div>
+      
+      
         <div class="col-md-2 col-sm-2 gift-finder-area">
-          <button class="white-btn" type="button" data-bs-toggle="collapse" data-bs-target="#closeGiftFinder" aria-expanded="true" aria-controls="closeGiftFinder">Gift Finder</button>
-        </p>
-        <div class="collapse" id="closeGiftFinder">
-          <div class="card card-body">
-            <input class="form-control mb-4" id="exampleFormControlInput1" placeholder="Enter Pincode">
-
-            <select class="form-select mb-4" aria-label="Default select example">
-              <option selected>Occasion</option>
-              <option value="1">Birthday</option>
-              <option value="2">Anniversary</option>
-              <option value="3">Congratulations</option>
-              <option value="4">Congratulations</option>
-              <option value="5">I Am Sorry</option>
-              <option value="6">Thinking Of You</option>
-              <option value="7">House Warming</option>
-              <option value="8">Thank You</option>
-              <option value="9">Miss You</option>
-              <option value="10">Get Well Soon</option>
-            </select>
-
-            <select class="form-select mb-4" aria-label="Default select example">
-              <option selected>Gift type</option>
-              <option value="1">All Gifts</option>
-              <option value="2">Bestsellers</option>
-              <option value="3">Cakes</option>
-              <option value="4">Flowers</option>
-              <option value="5">Personalised Gifts</option>
-              <option value="6">Premium Gifts</option>
-              <option value="7">Digital Gifts</option>
-              <option value="8">Experience Gifting</option>
-            </select>
-
-            <button class="main-btn mb-1" style="border: none;">Find Gifts</button>
+          <div class="white-btn gift-finder-btn">
+            Gift Finder
+            <div class="gift-finder-opt" id="closeGiftFinder">
+              <div class="card card-body">
+                <input class="form-control mb-4" id="exampleFormControlInput1" placeholder="Enter Pincode">
+      
+                <select class="form-select mb-4" aria-label="Default select example">
+                  <option selected>Occasion</option>
+                  <option value="1">Birthday</option>
+                  <option value="2">Anniversary</option>
+                  <option value="3">Congratulations</option>
+                  <option value="4">Congratulations</option>
+                  <option value="5">I Am Sorry</option>
+                  <option value="6">Thinking Of You</option>
+                  <option value="7">House Warming</option>
+                  <option value="8">Thank You</option>
+                  <option value="9">Miss You</option>
+                  <option value="10">Get Well Soon</option>
+                </select>
+      
+                <select class="form-select mb-4" aria-label="Default select example">
+                  <option selected>Gift type</option>
+                  <option value="1">All Gifts</option>
+                  <option value="2">Bestsellers</option>
+                  <option value="3">Cakes</option>
+                  <option value="4">Flowers</option>
+                  <option value="5">Personalised Gifts</option>
+                  <option value="6">Premium Gifts</option>
+                  <option value="7">Digital Gifts</option>
+                  <option value="8">Experience Gifting</option>
+                </select>
+      
+                <button class="main-btn mb-1" style="border: none;">Find Gifts</button>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
+      
         <div class="col-md-2 col-sm-2 d-flex top-header-icons">
           <a class="nav-link top-nav-icon" aria-current="page" href="#"><i class="fa-solid fa-heart"></i></a>
           <a class="nav-link top-nav-icon" href="#" id="navbarDropdown" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-user"></i></a>
           <a class="nav-link top-nav-icon" href="#" data-bs-toggle="modal" data-bs-target="#city-location"><i class="fa-solid fa-location-dot"></i></a>
         </div>
+      
       </div>
     </div>
   </div>
 
 
+  
 <!-- Login Popup -->
 <div class="login-popup">
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

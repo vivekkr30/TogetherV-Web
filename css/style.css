@@ -125,6 +125,7 @@ p {
   color: var(--white-color);
   font-size: 0.9375rem;
   border-radius: 0.2rem;
+  border: 0;
   outline-offset: 0px;
   outline: none;
   font-weight: 600;
@@ -145,6 +146,7 @@ p {
   color: var(--primary-color);
   font-size: 0.9375rem;
   border-radius: 0.2rem;
+  cursor: pointer;
   font-weight: 600;
   text-transform: capitalize;
   border: 2px solid #ebebeb;
@@ -162,6 +164,7 @@ p {
 
 .white-btn:hover {
   background-color: transparent;
+  border: none;
   color: var(--white-color);
   background: linear-gradient(0deg, #1f0000, #770303);
 }
@@ -219,6 +222,15 @@ p {
   z-index: 12;
   right: 250px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.11);
+}
+.gift-finder-opt{
+  display: none;
+  position: absolute;
+}
+.gift-finder-btn:hover .gift-finder-opt{
+  display: block;
+  position: absolute;
+  top: 60px;
 }
 
 

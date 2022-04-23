@@ -87,7 +87,7 @@ function resetMenu(){
     });
 
 
-    $(".owl-carousel").owlCarousel({
+    $(".category-section").owlCarousel({
       loop: true,
       margin: 10,
       center: true,
@@ -103,11 +103,10 @@ function resetMenu(){
           items: 4,
         },
         1000: {
-          items: 6,
+          items: 5,
         },
       },
     });
-
 
 // Category Page Filter Option Click Event
 
@@ -129,6 +128,33 @@ function backFunction(){
     document.getElementById("filter_sidebar").style.boxShadow="0px 0px 20px rgba(0, 0, 0, 0.132)";
     
   }
+
+//functions to change the price of main image
+function pdtPrice1(){
+  document.getElementById("productPrice").innerHTML="699";
+  document.getElementById("active").style.border="1px solid #cc0000"
+  // document.getElementById("productcutPrice").innerHTML.strike="₹799";
+
+}
+function pdtPrice2(){
+  document.getElementById("productPrice").innerHTML="799";
+  // document.getElementById("productcutPrice").innerHTML.strike="₹899";
+
+}
+function pdtPrice3(){
+  document.getElementById("productPrice").innerHTML="899";
+  // document.getElementById("productcutPrice").innerHTML.strike="₹999";
+
+}
+var i = 0;
+function addonPlus(){
+        document.getElementById('addonNumValue').value = ++i;
+    }
+
+function addonMinus(){
+      document.getElementById('addonNumValue').value = --i;
+  }
+
 
 
   

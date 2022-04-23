@@ -1,0 +1,50 @@
+.picZoomer{
+	position: relative;
+}
+.picZoomer-pic-wp{
+	position: relative;
+	overflow: hidden;
+	width: 450px !important;
+	height: 450px !important;
+
+}
+.picZoomer-pic-wp:hover .picZoomer-cursor{
+	display: block;
+}
+.picZoomer-zoom-pic{
+	position: relative;
+	top: 0;
+	left:0;
+}
+.picZoomer-pic{
+	width: 450px;
+	height: 450px;
+}
+.picZoomer-zoom-wp{
+	display: none;
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	z-index: 999;
+	overflow: hidden;
+}
+.picZoomer-cursor{
+	display: none;
+	cursor: crosshair;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	border: 1px solid #eee;
+	background-color: rgba(0,0,0,.1);
+}
+.picZoomCursor-ico{
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	
+}

@@ -137,13 +137,25 @@
   .sub-img-icon{
       height: 90px;
       max-width: 90px;
-      
-      padding-bottom: 10px !important;
+      object-fit: cover;
+      object-position: center;
+      cursor: pointer;
+      margin-bottom: 10px !important;
   }
   .sub-img-icon img{
       height: 90px;
       max-width: 90px;
-      object-fit: cover; 
+      border-radius: 5px;
+      cursor: pointer;
+      object-fit: cover !important;
+      object-position: center !important; 
+  }
+  .main-active-img img{
+    max-width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px;
+    object-position: center;
   }
   .text-over-img{
       position: absolute;
@@ -158,6 +170,8 @@
   .quality-img{
       display: inline-flex;
       justify-content: space-between;
+      /* position: relative;
+      top: 60px; */
   }
   .quality-img img{
       padding-left: 10px;
@@ -175,6 +189,53 @@
   }
   .active-product-title{
     font-weight: 600;
+  }
+
+  .pdt-img-slider{
+    max-width: 800px;
+  }
+  .pdtmodel-close-btn{
+    background-color: #fff;
+    position:relative;
+    top: 55px;
+    left: 50px;
+  }
+  .pdt-img-model{
+    background-color: transparent;
+    border: none;
+  }
+
+  .pdt-img-carousel .owl-prev{
+    position: absolute;
+    left: -45px;
+    top: 200px;
+    bottom: 70px;
+    background-color: white !important;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px !important;
+    box-shadow: 0px 0px 10px #0000001c;
+  }
+  .pdt-img-carousel  .owl-prev:hover{
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
+  }
+  
+  .pdt-img-carousel  .owl-next{
+    position: absolute;
+    right: -45px;
+    top: 200px;
+    bottom: 70px;
+    background-color: white !important;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px !important;
+    box-shadow: 0px 0px 10px #0000001c;
+  }
+  
+  .pdt-img-carousel  .owl-next:hover{
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
   }
 
   .rating-review{
@@ -232,6 +293,44 @@
     font-weight: 600;
   }
 
+  .cart-pdt-img img{
+    max-width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+  }
+  .cart-pdt-title p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+  .cart-pdt-img small{
+    font-size: 12px;
+  }
+  .cart-pdt-price p{
+    color: var(--primary-color);
+  }
+  .cart-pdt-footer{
+    padding: 10px;
+    position: fixed;
+    display: inline-flex;
+    bottom: 0;
+  }
+  .cart-pdt-footer button{
+    width: 150px;
+    margin-left: 20px;
+  }
+  .cart-pdt-footer .white-btn{
+margin-top: 0px !important;
+margin-right: 15px;
+  }
+  .cart-addon-counter{
+    position: relative;
+    left: 0px !important;
+    top: 0px !important;
+  }
+
   /* Pick-And Upgrade-section */
 
   .product-varient table tbody tr td{
@@ -248,18 +347,14 @@
   .product-varient table tbody tr td .var-opt{
     color: var(--text-color);
   }
-  .product-varient .sub-img-var .active{
-    border-radius: 5px;
-    border: 2px solid var(--primary-color);
-  }
   .product-varient table tbody tr td .var-price{
     color:var(--primary-color);
     line-height: 0;
     font-weight: 500;
   }
+  
   .sub-img-var:nth-child(4){
     position: relative;
-
     bottom: 28px;
   }
   .sub-img-var .plus{
@@ -406,6 +501,7 @@
 .addon-counter .addon-num{
   height: 30px;
   text-align: center;
+  border: none;
   border-radius: 2.5px;
   width: 30px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.13);

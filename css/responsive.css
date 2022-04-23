@@ -3,35 +3,41 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-  /* .navbar-light .navbar-nav .nav-link {
-    color: var(--black-color);
-    margin-left: 0.5rem !important;
-    margin-right: 0.5rem !important;
-    font-size: 12px;
-  } */
 }
-
-/* @media (max-width: 992px) {
-  .menu-bar button {
-    position: absolute;
-    margin-top: 6px;
-    border: 0;
-    top: -50px !important;
-    left: 15px !important;
-  }
-} */
 
 @media (max-width: 995px) {
   .logo-main {
     position: relative;
-    left: 100px;
+    left: 55px;
+    margin-top: 6px;
   }
-  .search-bar {
-    visibility: hidden;
+  .navigation-toggler{
+    border: none;
+    position: relative;
+    bottom: 20px;
   }
+
+  .navigation-nav > li > a{
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  .col-search{
+    margin-top: 6px !important;
+  }
+
+  .search-bar{
+    position: relative;
+    left: 50px !important;
+  }
+  .search-data{
+    width: 80% !important;
+  }
+
   .gift-finder-area {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 2.5px;
+    position:relative;
+    bottom: 5px;
+    right: 5px;
   }
   .white-btn {
     font-size: 12px;
@@ -48,11 +54,33 @@
   }
 
   .top-header-icons {
-    margin-left: -20px;
+    margin-left: -35px;
+    margin-top: 5px;
   }
+  .navigation{
+    background-color: transparent !important;
+  }
+
+  /* Main Slider-Banner */
+
+.main-slider-banner .owl-prev{
+  position: absolute;
+  left: 10px;
+  z-index: 1;
+  top: 100px;
+  bottom: 70px;
+}
+.main-slider-banner .owl-next{
+  position: absolute;
+  right: 10px;
+  top: 100px;
+  bottom: 70px;
+  z-index: 1;
+}
+
   .side-banner {
-    height: 230px;
-    max-width: 100%;
+    height: auto;
+    max-width: 162px;
   }
   .category-banner-section {
     padding-top: 25px;
@@ -181,6 +209,32 @@
     border-radius: 25px;
   }
 
+  .expericence-carousel .owl-prev{
+    position: absolute;
+    left: -45px;
+    top: 120px;
+    bottom: 70px;
+  }
+  
+  .expericence-carousel  .owl-next{
+    position: absolute;
+    right:0;
+    top: 120px;
+    bottom: 70px;
+  }
+  .trend-experience-carousel .owl-prev{
+    position: absolute;
+    left: -45px;
+    top: 120px;
+    bottom: 70px;
+  }
+  .trend-experience-carousel .owl-next{
+    position: absolute;
+    right:0;
+    top: 120px;
+    bottom: 70px;
+  }
+
   /* Get more form the store */
 
   .store {
@@ -202,7 +256,7 @@
   /* Find more form the store */
   .find-more-section .category-card {
     height: 203.57px;
-    width: 150px;
+    max-width: 162px;
   }
   .find-more-section .category-card img {
     transform: scale(2.2) translateY(20px) translateX(15px);
@@ -210,7 +264,7 @@
   .find-more-section .category-card .category-title {
     position: relative;
     left: 15px;
-    top: 50px;
+    top: 38px;
   }
   .find-more-section .category-card .category-title p {
     font-size: 12px !important;
@@ -235,41 +289,37 @@
 
   /* Review - Section */
   .review-section .card {
-    padding: 25px 15px;
+    padding: 10px;
     width: 14rem !important;
   }
-  .review-section .card img {
-    max-width: 80px !important;
+  .review-section .card .card-body{
+    padding: 0.5rem;
+  }
+  .review-section .card .review-pdt-name{
+    font-size: 12px;
+    padding-left: 10px;
+  }
+  .review-section .review-card .card-footer .review-thumb{
+    padding-left: 10px;
+  }
+  .review-section .review-card{
+    max-width: 680px !important;
   }
 
   /* Blog-Section */
-  .blog-section .blog-post-1 img {
-    height: inherit;
+  .blog-carousel .owl-prev{
+    position: absolute;
+    left: 5px;
+    top: 100px;
+    bottom: 70px;
+    background-color: var(--white-color) !important;
   }
-  .blog-section .blog-post-2 img {
-    height: inherit;
-  }
-  .blog-section .blog-post-1 .blog-title-1 {
-    position: relative;
-    width: 75%;
-    bottom: 115px;
-    font-size: 14px !important;
-    left: 25px;
-  }
-  .blog-section .blog-post-1 .blog-title-1 h4 {
-    font-size: 14px !important;
-  }
-  .blog-section .blog-post-2 .blog-title-2 {
-    position: relative;
-    bottom: 75px;
-    width: 75%;
-    left: 25px;
-  }
-  .blog-section .blog-post-2 .blog-title-2 h4 {
-    font-size: 14px !important;
-  }
-  .blog-section .blog-post-2 .blog-title-3 {
-    bottom: 75px !important;
+  .blog-carousel .owl-next{
+    position: absolute;
+    right: 5px;
+    top: 100px;
+    bottom: 70px;
+    background-color: var(--white-color) !important;
   }
 
   /* Mobile - App Section */
@@ -318,6 +368,13 @@
       font-size: 18px !important;
   }
   
+}
+
+@media (max-width:810px){
+  .side-banner {
+    height: auto;
+    max-width: 162px;
+  }
 }
 
 @media (max-width: 428px) {

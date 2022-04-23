@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/css/responsive.css">
   <link rel="stylesheet" href="/css/pdp-style.css">
 
+  <link rel="stylesheet" href="/jQuery-Image-Zoom/css/jquery-picZoomer.css">
 
   <!-- Owl-Carousel-JS-CDN-Links -->
 
@@ -45,7 +46,7 @@
 
         <div class="col-md-6 col-search col-sm-6 search-bar">
           <form action="#">
-            <input type="search" class="search-data" placeholder="Search">
+            <input type="search" class="search-data" placeholder="Search" id="tags">
             <button type="submit" class="fas fa-search search-button"></button>
           </form>
         </div>
@@ -91,7 +92,42 @@
         </div>
 
         <div class="col-md-2 col-sm-2 d-flex top-header-icons">
-          <a class="nav-link top-nav-icon" aria-current="page" href="#"><i class="fa-solid fa-heart"></i></a>
+          <a class="nav-link top-nav-icon" aria-current="page" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-heart"></i></a>
+
+          <!-- Add To cart Sidebar -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">Your Wishlist</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body mb-4">
+              <div class="addtoCart">
+                <div class="row">
+                  <div class="col-md-3 cart-pdt-img">
+                    <a href="#"><img src="/images/active-product-img/main-product-image.png" alt=""></a>
+                  </div>
+                  <div class="col-md-6 cart-pdt-title">
+                    <a href="#"><p>Endearing 8 Pink Roses Bouquet</p></a>
+                    <div class="addon-counter cart-addon-counter">
+                      <button class="addon-minus" onclick="addonMinus()">-</button>
+                      <input type="text" value="0" class="addon-num" id="addonNumValue">
+                      <button class="addon-plus" onclick="addonPlus()">+</button>
+                    </div>
+                  </div>
+                  <div class="col-md-3 cart-pdt-price">
+                  <p>₹699</p>
+                  <small> <a href="#">Remove</a> </small>
+                  </div>
+                </div>
+
+                <div class="row cart-pdt-footer">
+                    <button class="white-btn">Reset</button>
+                    <button class="main-btn">Checkout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <a class="nav-link top-nav-icon" href="#" id="navbarDropdown" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"><i class="fa-solid fa-user"></i></a>
           <a class="nav-link top-nav-icon" href="#" data-bs-toggle="modal" data-bs-target="#city-location"><i
@@ -539,25 +575,49 @@
         <div class="col-md-6">
           <!-- product-image-section -->
           <div class="row">
-            <div class="col-md-2 sub-img-col">
+            <div class="col-md-2 sub-img-col piclist">
               <!-- sub-images -->
               <div class="sub-img-icon">
-                <img src="/images/active-product-img/sub-img-1.png" alt="">
+                <img src="/images/active-product-img/sub-img-1.jpg" onclick="document.getElementById('pdt_img').src='/images/active-product-img/sub-img-1.jpg'" alt="">
               </div>
               <div class="sub-img-icon">
-                <img src="/images/active-product-img/sub-img-2.png" alt="">
+                <img src="/images/active-product-img/sub-img-2.jpg" onclick="document.getElementById('pdt_img').src='/images/active-product-img/sub-img-2.jpg'" alt="">
               </div>
               <div class="sub-img-icon">
-                <img src="/images/active-product-img/sub-img-3.png" alt="">
+                <img src="/images/active-product-img/sub-img-3.jpg" onclick="document.getElementById('pdt_img').src='/images/active-product-img/sub-img-3.jpg'" alt="">
               </div>
               <div class="sub-img-icon">
-                <img src="/images/active-product-img/sub-img-4.png" alt="">
+                <img src="/images/active-product-img/sub-img-4.jpg" onclick="document.getElementById('pdt_img').src='/images/active-product-img/sub-img-4.jpg'" alt="">
               </div>
             </div>
             <div class="col-md-10">
               <!-- active-product-image -->
-              <img src="/images/active-product-img/main-product-image.png" alt="">
-              <p class="text-over-img">Roll over image to zoom in</p>
+              <div class="main-active-img picZoomer">
+                <img id="pdt_img" src="/images/active-product-img/main-product-image.png" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
+              </div>
+              
+          <!-- Modal -->
+          <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content modal-lg pdt-img-model">
+                <div class="modal-header" style="border: none;">
+                  <button type="button" class="pdtmodel-close-btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="pdt-img-carousel owl-carousel owl-theme">
+                    <div class="item"><img class="pdt-img-slider" src="/images/active-product-img/sub-img-1.jpg"></div>
+                    <div class="item"><img class="pdt-img-slider" src="/images/active-product-img/sub-img-2.jpg"></div>
+                    <div class="item"><img class="pdt-img-slider" src="/images/active-product-img/sub-img-3.jpg"></div>
+                    <div class="item"><img class="pdt-img-slider" src="/images/active-product-img/sub-img-4.jpg"></div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+
+              <!-- <p class="text-over-img">Roll over image to zoom in</p> -->
             </div>
           </div>
           <div class="row">
@@ -588,9 +648,9 @@
               </div>
               <!-- Product Price and off -->
               <div class="active-pdt-price">
-                <sup>₹</sup><span class="product-amt">799</span>
+                <sup>₹</sup><span class="product-amt" id="productPrice">799</span>
                 <!-- Stickthrough-amount -->
-                <span class="strick-amt"><s>₹899</s></span>
+                <span class="strick-amt" id="productcutPrice"><s>₹899</s></span>
                 <!-- offer-tag -->
                 <span class="offer-discount">(10% Off*)</span>
               </div>
@@ -620,21 +680,42 @@
                 <table>
                   <tbody>
                     <tr>
-                      <td class="sub-img-var"><img src="/images/active-product-img/sub-img-1.png" alt="">
+                      <td class="sub-img-var" onclick="pdtPrice1()"><img src="/images/active-product-img/sub-img-1.jpg" alt="">
                         <p class="var-opt">Small</p>
                         <p class="var-price">₹ 699</p>
                       </td>
-                      <td class="sub-img-var"><img class="active" src="/images/active-product-img/sub-img-2.png" alt="">
+                      <td class="sub-img-var" onclick="pdtPrice2()"><img class="active" src="/images/active-product-img/sub-img-2.jpg" alt="">
                         <p class="var-opt">Medium</p>
                         <p class="var-price">₹ 799</p>
                       </td>
-                      <td class="sub-img-var"><img src="/images/active-product-img/sub-img-3.png" alt="">
+                      <td class="sub-img-var" onclick="pdtPrice3()"><img src="/images/active-product-img/sub-img-3.jpg" alt="">
                         <p class="var-opt">Large</p>
                         <p class="var-price">₹ 899</p>
                       </td>
-                      <td class="sub-img-var">
-                        <div class="plus">
+                      <td class="sub-img-var" title="Customize Your Order">
+                        <div class="plus" data-bs-toggle="modal" data-bs-target="#custom-opt">
                           <i class="fa-solid fa-plus"></i>
+                          <!-- Modal -->
+                            <div class="modal fade" id="custom-opt" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="custom-optLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Make it extra special!</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="font-size: 14px;"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="row">
+                                      <div class="col-md-3 custom-section">
+                                        <img class="custom-sec-img" src="/images/active-product-img/sub-img-1.jpg" alt="">
+                                      </div>
+                                      <div class="col-md-9">
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                       </td>
                     </tr>
@@ -759,9 +840,9 @@
                               </select>
                               <!-- addon-counter -->
                               <div class="addon-counter">
-                                <button class="addon-minus">-</button>
-                                <p class="addon-num">0</p>
-                                <button class="addon-plus">+</button>
+                                <button class="addon-minus" onclick="addonMinus()">-</button>
+                                <input type="text" value="0" class="addon-num" id="addonNumValue">
+                                <button class="addon-plus" onclick="addonPlus()">+</button>
                               </div>
 
                             </div>
@@ -807,9 +888,9 @@
                               </select>
                               <!-- addon-counter -->
                               <div class="addon-counter">
-                                <button class="addon-minus">-</button>
-                                <p class="addon-num">0</p>
-                                <button class="addon-plus">+</button>
+                                <button class="addon-minus" onclick="addonMinus()">-</button>
+                                <input type="text" value="0" class="addon-num" id="addonNumValue">
+                                <button class="addon-plus" onclick="addonPlus()">+</button>
                               </div>
 
                             </div>
@@ -856,9 +937,9 @@
                               </select>
                               <!-- addon-counter -->
                               <div class="addon-counter">
-                                <button class="addon-minus">-</button>
-                                <p class="addon-num">0</p>
-                                <button class="addon-plus">+</button>
+                                <button class="addon-minus" onclick="addonMinus()">-</button>
+                                <input type="text" value="0" class="addon-num" id="addonNumValue">
+                                <button class="addon-plus" onclick="addonPlus()">+</button>
                               </div>
 
                             </div>
@@ -904,9 +985,9 @@
                               </select>
                               <!-- addon-counter -->
                               <div class="addon-counter">
-                                <button class="addon-minus">-</button>
-                                <p class="addon-num">0</p>
-                                <button class="addon-plus">+</button>
+                                <button class="addon-minus" onclick="addonMinus()">-</button>
+                                <input type="text" value="0" class="addon-num" id="addonNumValue">
+                                <button class="addon-plus" onclick="addonPlus()">+</button>
                               </div>
 
                             </div>
@@ -956,9 +1037,9 @@
                               </select>
                               <!-- addon-counter -->
                               <div class="addon-counter">
-                                <button class="addon-minus">-</button>
-                                <p class="addon-num">0</p>
-                                <button class="addon-plus">+</button>
+                                <button class="addon-minus" onclick="addonMinus()">-</button>
+                                <input type="text" value="0" class="addon-num" id="addonNumValue">
+                                <button class="addon-plus" onclick="addonPlus()">+</button>
                               </div>
 
                             </div>
@@ -1004,9 +1085,9 @@
                               </select>
                               <!-- addon-counter -->
                               <div class="addon-counter">
-                                <button class="addon-minus">-</button>
-                                <p class="addon-num">0</p>
-                                <button class="addon-plus">+</button>
+                                <button class="addon-minus" onclick="addonMinus()">-</button>
+                                <input type="text" value="0" class="addon-num" id="addonNumValue">
+                                <button class="addon-plus" onclick="addonPlus()">+</button>
                               </div>
 
                             </div>
@@ -1053,9 +1134,9 @@
                               </select>
                               <!-- addon-counter -->
                               <div class="addon-counter">
-                                <button class="addon-minus">-</button>
-                                <p class="addon-num">0</p>
-                                <button class="addon-plus">+</button>
+                                <button class="addon-minus" onclick="addonMinus()">-</button>
+                                <input type="text" value="0" class="addon-num" id="addonNumValue">
+                                <button class="addon-plus" onclick="addonPlus()">+</button>
                               </div>
 
                             </div>
@@ -1101,9 +1182,9 @@
                               </select>
                               <!-- addon-counter -->
                               <div class="addon-counter">
-                                <button class="addon-minus">-</button>
-                                <p class="addon-num">0</p>
-                                <button class="addon-plus">+</button>
+                                <button class="addon-minus" onclick="addonMinus()">-</button>
+                                <input type="text" value="0" class="addon-num" id="addonNumValue">
+                                <button class="addon-plus" onclick="addonPlus()">+</button>
                               </div>
 
                             </div>
@@ -1257,6 +1338,337 @@
     </div>
   </div>
 
+  <!-- Review Section -->
+  <div class="review-section wrapper">
+    <div class="container">
+      <h4 class="mb-4">What Customers Are Saying</h4>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="user-review-carousel owl-carousel owl-theme">
+            <div class="item">
+              <div class="review-card card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-12">
+                      <div class="card-body">
+                        <h5 class="card-title">Aman Gupta</h5>
+                      </div>
+                  </div>
+                </div>
+                <div class="row g-0">
+                  <div class="col-md-12">
+                    <div class="card-body">
+                      <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi ratione natus mollitia earum velit quibusdam doloribus dolorem, recusandae voluptates, iste quidem voluptatem et explicabo, cumque sed minima libero quo nostrum?</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="row g-0">
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <p class="card-text">Jan 6,2022</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <p class="card-text star-rating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </p>
+                  </div>
+              </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-12">
+                  <div class="card-footer">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="/images/review-product.jpg" alt="">
+                      </div>
+                      <div class="col-md-8">
+                        <p class="review-pdt-name">Adorable MOM Balloon Bouquet</p>
+                        <p><i class="fa-solid fa-thumbs-up review-thumb"></i> 4.7</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="review-card card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-12">
+                  <div class="card-body">
+                    <h5 class="card-title">Aman Gupta</h5>
+                  </div>
+              </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-md-12">
+                <div class="card-body">
+                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi ratione natus mollitia earum velit quibusdam doloribus dolorem, recusandae voluptates, iste quidem voluptatem et explicabo, cumque sed minima libero quo nostrum?</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="row g-0">
+              <div class="col-md-6">
+                <div class="card-body">
+                  <p class="card-text">Jan 6,2022</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <p class="card-text star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+          </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <div class="card-footer">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="/images/review-product.jpg" alt="">
+                  </div>
+                  <div class="col-md-8">
+                     <p class="review-pdt-name">Adorable MOM Balloon Bouquet</p>
+                    <p><i class="fa-solid fa-thumbs-up review-thumb"></i> 4.7</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="review-card card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-12">
+                <div class="card-body">
+                  <h5 class="card-title">Aman Gupta</h5>
+                </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-12">
+              <div class="card-body">
+                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi ratione natus mollitia earum velit quibusdam doloribus dolorem, recusandae voluptates, iste quidem voluptatem et explicabo, cumque sed minima libero quo nostrum?</p>
+              </div>
+          </div>
+        </div>
+
+        <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <p class="card-text">Jan 6,2022</p>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <p class="card-text star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+            </div>
+        </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <div class="card-footer">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="/images/review-product.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                   <p class="review-pdt-name">Adorable MOM Balloon Bouquet</p>
+                  <p><i class="fa-solid fa-thumbs-up review-thumb"></i> 4.7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="review-card card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-12">
+              <div class="card-body">
+                <h5 class="card-title">Aman Gupta</h5>
+              </div>
+          </div>
+        </div>
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card-body">
+              <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi ratione natus mollitia earum velit quibusdam doloribus dolorem, recusandae voluptates, iste quidem voluptatem et explicabo, cumque sed minima libero quo nostrum?</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="row g-0">
+          <div class="col-md-6">
+            <div class="card-body">
+              <p class="card-text">Jan 6,2022</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <p class="card-text star-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+          </div>
+      </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <div class="card-footer">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="/images/review-product.jpg" alt="">
+              </div>
+              <div class="col-md-8">
+                 <p class="review-pdt-name">Adorable MOM Balloon Bouquet</p>
+                <p><i class="fa-solid fa-thumbs-up review-thumb"></i> 4.7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="review-card card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card-body">
+              <h5 class="card-title">Aman Gupta</h5>
+            </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-12">
+          <div class="card-body">
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi ratione natus mollitia earum velit quibusdam doloribus dolorem, recusandae voluptates, iste quidem voluptatem et explicabo, cumque sed minima libero quo nostrum?</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="row g-0">
+        <div class="col-md-6">
+          <div class="card-body">
+            <p class="card-text">Jan 6,2022</p>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <p class="card-text star-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </p>
+        </div>
+    </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div class="card-footer">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/images/review-product.jpg" alt="">
+            </div>
+            <div class="col-md-8">
+               <p class="review-pdt-name">Adorable MOM Balloon Bouquet</p>
+              <p><i class="fa-solid fa-thumbs-up review-thumb"></i> 4.7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="review-card card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">Aman Gupta</h5>
+          </div>
+      </div>
+    </div>
+    <div class="row g-0">
+      <div class="col-md-12">
+        <div class="card-body">
+          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi ratione natus mollitia earum velit quibusdam doloribus dolorem, recusandae voluptates, iste quidem voluptatem et explicabo, cumque sed minima libero quo nostrum?</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="row g-0">
+      <div class="col-md-6">
+        <div class="card-body">
+          <p class="card-text">Jan 6,2022</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <p class="card-text star-rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </p>
+      </div>
+  </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <div class="card-footer">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/images/review-product.jpg" alt="">
+          </div>
+          <div class="col-md-8">
+             <p class="review-pdt-name">Adorable MOM Balloon Bouquet</p>
+            <p><i class="fa-solid fa-thumbs-up review-thumb"></i> 4.7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+
   <!-- Find-More-Section -->
 
   <div class="container">
@@ -1335,39 +1747,58 @@
   </div>
 
 
-  <!-- BLOG-SECTION -->
-
-  <div class="container">
-    <div class="blog-section wrapper">
-      <h4>Recent Blog</h4>
-      <div class="row">
-        <div class="col-md-7">
-          <div class="blog-post-1" id="blog-past">
-            <img id="blog-image" src="/images/blog-img-5.jpeg" alt="" srcset="">
-            <div class="blog-title-1">
-              <h4>Funny Things Married Couples Fight Over<span class="author-name-time">Ishita Bansal |
-                  10-03-2022</span></h4>
+<!-- BLOG-SECTION -->
+<div class="container wrapper">
+  <h4 class="mb-4">Recent Blog</h4>
+      <div class="blog-carousel owl-carousel owl-theme">
+        <div class="item">
+         <a href="#">
+          <div class="card blog-card">
+            <img src="/images/blog-img-5.jpeg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Funny Things Married Couples Fight Over</h5>
+              <p class="card-text">Ishita Bansal | 10-03-2022</p>
             </div>
           </div>
+         </a>
         </div>
-        <div class="col-md-5">
-          <div class="blog-post-2">
-            <img src="/images/blog-img-6.png" alt="">
-            <div class="blog-title-2">
-              <h4>Know Why We Celebrate Holi<span class="author-name-time">Ishita Bansal | 10-03-2022</span></h4>
+        <div class="item">
+          <a href="#">
+            <div class="card blog-card">
+              <img src="/images/blog-img-6.png" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Know Why We Celebrate Holi</h5>
+                <p class="card-text">Ishita Bansal | 10-03-2022</p>
+              </div>
             </div>
-          </div>
-
-          <div class="blog-post-2">
-            <img src="/images/blog-img-1.jpeg" alt="">
-            <div class="blog-title-2 blog-title-3">
-              <h4>Tips to Stay Happy<span class="author-name-time">Ishita Bansal | 10-03-2022</span></h4>
-            </div>
-          </div>
+          </a>
         </div>
-      </div>
+        <div class="item">
+          <a href="">
+            <div class="card blog-card">
+              <img src="/images/blog-img-1.jpeg" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Tips to Stay Happy</h5>
+                <p class="card-text">Ishita Bansal | 10-03-2022</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <div class="card blog-card">
+              <img src="/images/blog-img-7.jpeg" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Why Singlehood Is The Best Phase</h5>
+                <p class="card-text">Ishita Bansal | 10-03-2022</p>
+              </div>
+            </div>
+          </a>
+        </div>
     </div>
-  </div>
+    </div>
+
+
 
 
   <!-- MOBILE-APP-DOWNLOAD-SECTION -->
@@ -1390,6 +1821,11 @@
   <!-- Footer - Section -->
   <div class="footer-section">
     <div class="container">
+
+      <div class="col-md-12 footer-1" style="margin-bottom: 50px;">
+        <div class="mb-4" style="margin-bottom: 20px">
+          <p class="footer-links-title mb-2"><a class="footer-links-title mb-2" style="text-decoration: underline" href="https://www.togetherv.com/delhi-ncr">Experiences in Delhi NCR</a></p>
+          <div class="row"><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/delhi-ncr/candle-light-dinner" target="_blank">Candlelight Dinners in Delhi NCR</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/delhi-ncr/flower-combo" target="_blank">Flower Combo in Delhi NCR</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/delhi-ncr/song-surprise-by-guitarist" target="_blank">Song surprise in Delhi NCR</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/delhi-ncr/personalised-video" target="_blank">Personalised Video in Delhi NCR</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/delhi-ncr/digital-experience" target="_blank">Digital Experience in Delhi NCR</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/delhi-ncr/home-surprise" target="_blank">Balloon Surprise in Delhi NCR</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/delhi-ncr/luxury" target="_blank">Romantic Stays in Delhi NCR</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/delhi-ncr/gifts" target="_blank">Gifts in Delhi NCR</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/delhi-ncr/cake-combo" target="_blank">Cake Combo in Delhi NCR</a></div></div></div><div class="mb-4" style="margin-bottom: 20px"><p class="footer-links-title mb-2"><a class="footer-links-title mb-2" style="text-decoration: underline" href="https://www.togetherv.com/bangalore">Experiences in Bangalore</a></p><div class="row"><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/bangalore/candle-light-dinner" target="_blank">Candlelight Dinners in Bangalore</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/bangalore/song-surprise-by-guitarist" target="_blank">Song surprise in Bangalore</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/bangalore/personalised-video" target="_blank">Personalised Video in Bangalore</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/bangalore/personalised-app" target="_blank">Personalised app in Bangalore</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/bangalore/digital-experience" target="_blank">Digital Experience in Bangalore</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/bangalore/home-surprise" target="_blank">Balloon Surprise in Bangalore</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/bangalore/luxury" target="_blank">Romantic Stays in Bangalore</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/bangalore/gifts" target="_blank">Gifts in Bangalore</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/bangalore/cake-combo" target="_blank">Cake Combo in Bangalore</a></div></div></div><div class="mb-4" style="margin-bottom: 20px"><p class="footer-links-title mb-2"><a class="footer-links-title mb-2" style="text-decoration: underline" href="https://www.togetherv.com/mumbai">Experiences in Mumbai</a></p><div class="row"><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/mumbai/candle-light-dinner" target="_blank">Candlelight Dinners in Mumbai</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/mumbai/song-surprise-by-guitarist" target="_blank">Song surprise in Mumbai</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/mumbai/personalised-video" target="_blank">Personalised Video in Mumbai</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/mumbai/personalised-app" target="_blank">Personalised app in Mumbai</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/mumbai/digital-experience" target="_blank">Digital Experience in Mumbai</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/mumbai/home-surprise" target="_blank">Balloon Surprise in Mumbai</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/mumbai/luxury" target="_blank">Romantic Stays in Mumbai</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/mumbai/gifts" target="_blank">Gifts in Mumbai</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/mumbai/cake-combo" target="_blank">Cake Combo in Mumbai</a></div></div></div><div class="mb-4" style="margin-bottom: 20px"><p class="footer-links-title mb-2"><a class="footer-links-title mb-2" style="text-decoration: underline" href="https://www.togetherv.com/kolkata">Experiences in Kolkata</a></p><div class="row"><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/kolkata/candle-light-dinner" target="_blank">Candlelight Dinners in Kolkata</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/kolkata/song-surprise-by-guitarist" target="_blank">Song surprise in Kolkata</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/kolkata/personalised-video" target="_blank">Personalised Video in Kolkata</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/kolkata/personalised-app" target="_blank">Personalised app in Kolkata</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/kolkata/digital-experience" target="_blank">Digital Experience in Kolkata</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/kolkata/home-surprise" target="_blank">Balloon Surprise in Kolkata</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/kolkata/luxury" target="_blank">Romantic Stays in Kolkata</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/kolkata/gifts" target="_blank">Gifts in Kolkata</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/kolkata/cake-combo" target="_blank">Cake Combo in Kolkata</a></div></div></div><div class="mb-4" style="margin-bottom: 20px"><p class="footer-links-title mb-2"><a class="footer-links-title mb-2" style="text-decoration: underline" href="https://www.togetherv.com/pune">Experiences in Pune</a></p><div class="row"><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/pune/candle-light-dinner" target="_blank">Candlelight Dinners in Pune</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/pune/song-surprise-by-guitarist" target="_blank">Song surprise in Pune</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/pune/personalised-video" target="_blank">Personalised Video in Pune</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/pune/personalised-app" target="_blank">Personalised app in Pune</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/pune/digital-experience" target="_blank">Digital Experience in Pune</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/pune/home-surprise" target="_blank">Balloon Surprise in Pune</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/pune/luxury" target="_blank">Romantic Stays in Pune</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/pune/gifts" target="_blank">Gifts in Pune</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/pune/cake-combo" target="_blank">Cake Combo in Pune</a></div></div></div><div class="mb-4" style="margin-bottom: 20px"><p class="footer-links-title mb-2"><a class="footer-links-title mb-2" style="text-decoration: underline" href="https://www.togetherv.com/jaipur">Experiences in Jaipur</a></p><div class="row"><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/jaipur/candle-light-dinner" target="_blank">Candlelight Dinners in Jaipur</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/jaipur/song-surprise-by-guitarist" target="_blank">Song surprise in Jaipur</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/jaipur/personalised-video" target="_blank">Personalised Video in Jaipur</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/jaipur/personalised-app" target="_blank">Personalised app in Jaipur</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/jaipur/digital-experience" target="_blank">Digital Experience in Jaipur</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/jaipur/home-surprise" target="_blank">Balloon Surprise in Jaipur</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/jaipur/luxury" target="_blank">Romantic Stays in Jaipur</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/jaipur/gifts" target="_blank">Gifts in Jaipur</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/jaipur/cake-combo" target="_blank">Cake Combo in Jaipur</a></div></div></div><div class="mb-4" style="margin-bottom: 20px"><p class="footer-links-title mb-2"><a class="footer-links-title mb-2" style="text-decoration: underline" href="https://www.togetherv.com/ahmedabad">Experiences in Ahmedabad</a></p><div class="row"><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/ahmedabad/song-surprise-by-guitarist" target="_blank">Song surprise in Ahmedabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/ahmedabad/personalised-video" target="_blank">Personalised Video in Ahmedabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/ahmedabad/personalised-app" target="_blank">Personalised app in Ahmedabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/ahmedabad/digital-experience" target="_blank">Digital Experience in Ahmedabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/ahmedabad/home-surprise" target="_blank">Balloon Surprise in Ahmedabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/ahmedabad/cake-combo" target="_blank">Cake Combo in Ahmedabad</a></div></div></div><div class="mb-4" style="margin-bottom: 20px"><p class="footer-links-title mb-2"><a class="footer-links-title mb-2" style="text-decoration: underline" href="https://www.togetherv.com/hyderabad">Experiences in Hyderabad</a></p><div class="row"><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/hyderabad/song-surprise-by-guitarist" target="_blank">Song surprise in Hyderabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/hyderabad/personalised-video" target="_blank">Personalised Video in Hyderabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/hyderabad/personalised-app" target="_blank">Personalised app in Hyderabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/hyderabad/digital-experience" target="_blank">Digital Experience in Hyderabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/hyderabad/home-surprise" target="_blank">Balloon Surprise in Hyderabad</a></div><div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 5px;"><a class="footer-links-title-medium" href="https://www.togetherv.com/hyderabad/cake-combo" target="_blank">Cake Combo in Hyderabad</a></div></div></div></div>
       <div class="row footer-row-1">
 
         <div class="col-md-3">
@@ -1397,11 +1833,11 @@
           <img class="footer-logo" src="/images/tgv-white-logo.png" alt="">
           <div class="call-info">
             <i class="fa-solid fa-phone"></i>
-            <span> +91-9711529001</span>
+            <span>+91-9711529001</span>
           </div>
           <div class="mail-info">
             <i class="fa-solid fa-envelope"></i>
-            <span> info@togetherv.com</span>
+            <span>info@togetherv.com</span>
           </div>
         </div>
 
@@ -1440,7 +1876,7 @@
 
         <div class="col-md-3">
           <h4>Stay Tuned With Us</h4>
-          <p>For latest updates, deals & offers
+          <p style="font-size: 14px; font-weight: 300;">For latest updates, deals & offers
             direct in your inbox</p>
 
           <div class="input-group mb-3 newsletter">
@@ -1468,19 +1904,93 @@
 
 
   <!--Bootstrap JS-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 
+  <!-- Owl-Carousel-JS-CDN-Links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/OwlCarousel-2/dist/owl.carousel.min.js"></script>
+
+  <script>
+    $('.user-review-carousel').owlCarousel({
+   loop:true,
+   margin:10,
+   autoplayTimeout:4000,
+   autoplay:true,
+   dots:true,
+   nav:false,
+   responsive:{
+       0:{
+           items:1
+       },
+       600:{
+           items:3
+       },
+       1000:{
+           items:3
+       }
+   }
+  })
+  </script>
+
+  <script>
+    $('.blog-carousel').owlCarousel({
+   loop:true,
+   margin:10,
+   autoplayTimeout:3000,
+   autoplay:true,
+   dots:false,
+   nav:true,
+   responsive:{
+       0:{
+           items:1
+       },
+       600:{
+           items:3
+       },
+       1000:{
+           items:3
+       }
+   }
+})
+  </script>
+
+  <script>
+    $('.pdt-img-carousel').owlCarousel({
+   loop:true,
+   margin:10,
+   center:false,
+   autoplayTimeout:4000,
+   autoplay:true,
+   dots:false,
+   nav:true,
+   responsive:{
+       0:{
+           items:1
+       },
+       600:{
+           items:1
+       },
+       1000:{
+           items:1
+       }
+   }
+})
   </script>
   <!-- Custom JavaScript-->
   <script src="/js/script.js"></script>
+  <script src="/jQuery-Image-Zoom/src/jquery.picZoomer.js"></script>
+
+  <script>
+    $('.picZoomer').picZoomer();
+    
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </body>
 
 </html>

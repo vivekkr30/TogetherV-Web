@@ -378,7 +378,6 @@ p {
 }
 .navigation{
   background:var(--white-color);
-  padding: 0 1rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -411,6 +410,11 @@ p {
 .navigation-collapse{
   overflow-y: scroll;
   display: none;
+}
+.navigation-nav{
+  background: white;
+  width: 100%;
+  padding: 0 1rem;
 }
 .navigation-nav > li > a{
   text-transform: uppercase;
@@ -533,30 +537,56 @@ p {
 .sub-ctg-section .icon-img {
   height: auto;
   max-width: 65px;
-  padding: 5px;
   background-color: var(--white-color);
   border-radius: 50%;
 }
 .sub-ctg-section .icon-img img {
   max-width: 60px;
   object-fit: cover;
+  object-position: center;
 }
 .sub-ctg-section .icon-img p {
   font-size: 14px;
-  padding-top: 10px;
+  margin-top: 10px;
+}
+.sub-ctg-item{
+  display: flex !important;
+  align-content: center;
+  justify-content: space-around;
+}
+.category-section .owl-prev{
+  position: absolute;
+  left: -45px;
+  top: 50px;
+  bottom: 70px;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px !important;
+  box-shadow: 0px 0px 10px #0000001c;
+}
+.category-section .owl-prev:hover{
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
 }
 
-.owl-nav .owl-prev {
+.category-section .owl-next{
   position: absolute;
-  top: 25px;
-  left: 0px;
+  right: -45px;
+  top: 50px;
+  bottom: 70px;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px !important;
+  box-shadow: 0px 0px 10px #0000001c;
 }
 
-.owl-nav .owl-next {
-  position: absolute;
-  top: 25px;
-  right: 0px;
+.category-section .owl-next:hover{
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
 }
+
 
 /* Top-Picks-Section */
 
@@ -698,6 +728,39 @@ p {
   font-size: 12px;
   font-weight: normal;
   color: var(--text-color);
+}
+
+.owl-one .owl-prev{
+  position: absolute;
+  left: -45px;
+  top: 50px;
+  bottom: 70px;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px !important;
+  box-shadow: 0px 0px 10px #0000001c;
+}
+.owl-one .owl-prev:hover{
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
+}
+
+.owl-one .owl-next{
+  position: absolute;
+  right: -45px;
+  top: 50px;
+  bottom: 70px;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px !important;
+  box-shadow: 0px 0px 10px #0000001c;
+}
+
+.owl-one .owl-next:hover{
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
 }
 
 /* Bank & Wallet Offer Small Banner */
@@ -1028,6 +1091,20 @@ p {
 
 /* FOOTER SECTION */
 
+.footer-links-title{
+  color: var(--white-color);
+  font-weight: 600;
+}
+.footer-links-title:hover{
+  color: var(--third-color) !important;
+}
+
+.footer-links-title-medium{
+  color: var(--third-color);
+}
+.footer-links-title-medium:hover{
+  color: var(--white-color) !important;
+}
 .footer-section {
   max-height: 100%;
   background: linear-gradient(0deg, #1f0000, #770303);
@@ -1070,6 +1147,8 @@ p {
 
 .footer-section .footer-tab .footer-link {
   list-style: none;
+  font-weight: 300;
+  font-size: 14px;
   margin-top: 5px;
 }
 .footer-section .footer-tab .footer-link a {
@@ -1115,3 +1194,12 @@ p {
   border-top: 1px solid var(--white-color);
   padding-top: 15px;
 }
+.copyright-section p{
+  font-size: 14px;
+  font-weight: 300;
+}
+.footer-links-title-medium{
+  font-size: 14px;
+  font-weight: 300;
+}
+
